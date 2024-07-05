@@ -1,0 +1,22 @@
+body {
+  text-align: center;
+  align-content: center;
+  background-image: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif)
+}
+
+#welcome {
+  background: linear-gradient(0deg,#ffbdfb, #dbedff, #e8ffee); ;
+  text-align: center;
+  align-content: center;
+  border: black groove 10px;
+  height: 450px;
+  width: 680px;
+  margin: auto;
+}
+#head-text {
+  color: #62548b;
+}
+
+#main-menu-text {
+  color: #62548b;
+}
