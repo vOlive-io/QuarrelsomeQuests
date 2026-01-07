@@ -22,6 +22,10 @@ function updateClassTab() {
     const classTab = document.getElementById("classes");
     //to be implemented: display class selection and upgrades
 }
+function updateStoreTab() {
+    const storeTab = document.getElementById("store");
+    //to be implemented: display store items and purchasing options
+}
 
 function openExplore() { }
 
