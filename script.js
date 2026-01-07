@@ -11,8 +11,17 @@ function updateClassTab() {
     const classTab = document.getElementById("classes");
     //to be implemented: display class selection and upgrades
 }
+function openStore() {
+    document.getElementById("welcome").style.display = "none";
+    document.getElementById("store").style.display = "block";
+    updateStoreTab();
+}
+function openStats() { 
+    document.getElementById("welcome").style.display = "none";
+    document.getElementById("stats").style.display = "block";
+    updateStatsTab();
+}
+
 function openExplore() { }
-function openStore() { }
-function openStats() { }
 
 
