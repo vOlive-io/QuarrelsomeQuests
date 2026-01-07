@@ -13,15 +13,12 @@ body {
 #classes, #explore, #store, #prestige, #stats {
   display: none;
 }
-
 #head-text {
   color: #62548b;
 }
-
 #main-menu-text {
   color: #62548b;
 }
-
 button {
   background-color: #62548b;
   color: white;
