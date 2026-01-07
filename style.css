@@ -1,11 +1,12 @@
 body {
   text-align: center;
   align-content: center;
-  background-size: 100%;
+  background-size: cover;
+  background: linear-gradient(0deg,#ffbdfb, #dbedff, #e8ffee) fixed;
+
 }
 
 .tab {
-  background: linear-gradient(0deg,#ffbdfb, #dbedff, #e8ffee); ;
   text-align: center;
   align-content: center;
   margin: auto;
