@@ -22,3 +22,17 @@ body {
   color: #62548b;
 }
 
+button {
+  background-color: #62548b;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
