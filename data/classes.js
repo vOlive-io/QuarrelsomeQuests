@@ -7,10 +7,11 @@ export const classes = [
             attack: 10,
             defense: 8,
             mana: 50,
+            energy: 100,
             luck: 5,
             complexity: "Easy",
         },
-        bonusMoves: {}
+        bonusMoves: [""]
     }
 
 ];
