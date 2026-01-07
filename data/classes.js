@@ -9,7 +9,8 @@ export const classes = [
             mana: 50,
             luck: 5,
             complexity: "Easy",
-        }
+        },
+        bonusMoves: {}
     }
 
 ];
