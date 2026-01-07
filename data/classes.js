@@ -12,7 +12,8 @@ export const classes = [
             luck: 5,
             complexity: "Easy",
         },
-        bonusMoves: [""]
+        bonusMoves: [],
+        spells: [],
     }
 
 ];
