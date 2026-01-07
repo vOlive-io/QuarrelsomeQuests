@@ -12,9 +12,7 @@ body {
   margin: auto;
   height: 100%;
 }
-#welcome {
-  height: 100%;
-}
+
 #classes, #explore, #store, #prestige, #stats {
   display: none;
 }
