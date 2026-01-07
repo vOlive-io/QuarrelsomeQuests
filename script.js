@@ -1,6 +1,6 @@
-import "./data/classes.js";
-import "./data/player.js";
-import "./data/store.js";
+import { stats } from "../data/player.js";
+import { store } from "../data/store.js";
+import { classes } from "../data/classes.js";
 
 function openClass() { }
 function openExplore() { }
