@@ -4,11 +4,14 @@ body {
   background-size: 30%;
 }
 
-#welcome {
+.tab {
   background: linear-gradient(0deg,#ffbdfb, #dbedff, #e8ffee); ;
   text-align: center;
   align-content: center;
   margin: auto;
+}
+#classes, #explore, #store, #prestige, #stats {
+  display: none;
 }
 
 #head-text {
