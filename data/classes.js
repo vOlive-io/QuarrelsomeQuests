@@ -14,7 +14,24 @@ export const classes = [
         },
         bonusMoves: [],
         spells: [],
-    }
+    },
+    {
+        name: "Mage",
+        selected: false,
+        stats : {
+            health: 100,
+            attack: 6,
+            defense: 5,
+            mana: 200,
+            energy: 75,
+            saturation: 125,
+            luck: 10,
+            complexity: "Moderate",
+        },
+        bonusMoves: [],
+        spells: [],
+    },
+
 
 ];
 console.log("✅ Classes loaded:", classes);
