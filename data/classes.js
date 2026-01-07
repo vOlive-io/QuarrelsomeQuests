@@ -8,6 +8,7 @@ export const classes = [
             defense: 8,
             mana: 50,
             energy: 100,
+            saturation: 100,
             luck: 5,
             complexity: "Easy",
         },
