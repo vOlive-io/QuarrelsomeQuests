@@ -7,10 +7,6 @@ function openClass() {
     document.getElementById("classes").style.display = "block";
     updateClassTab();
 }
-function updateClassTab() {
-    const classTab = document.getElementById("classes");
-    //to be implemented: display class selection and upgrades
-}
 function openStore() {
     document.getElementById("welcome").style.display = "none";
     document.getElementById("store").style.display = "block";
@@ -20,6 +16,11 @@ function openStats() {
     document.getElementById("welcome").style.display = "none";
     document.getElementById("stats").style.display = "block";
     updateStatsTab();
+}
+
+function updateClassTab() {
+    const classTab = document.getElementById("classes");
+    //to be implemented: display class selection and upgrades
 }
 
 function openExplore() { }
