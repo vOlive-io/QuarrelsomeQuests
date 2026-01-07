@@ -14,6 +14,7 @@ body {
   width: 680px;
   margin: auto;
 }
+
 #head-text {
   color: #62548b;
 }
@@ -35,4 +36,3 @@ button {
   cursor: pointer;
   border-radius: 12px;
 }
-
