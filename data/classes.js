@@ -31,7 +31,5 @@ export const classes = [
         bonusMoves: [],
         spells: [],
     },
-
-
 ];
 console.log("✅ Classes loaded:", classes);
