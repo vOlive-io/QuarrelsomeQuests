@@ -5,6 +5,7 @@ import { classes } from "./data/classes.js";
 ///////////////////////////
 //       TAB NAV         //
 ///////////////////////////
+
 function openClass() { 
     document.getElementById("welcome").style.display = "none";
     document.getElementById("classes").style.display = "block";
@@ -34,3 +35,6 @@ function openExplore() { }
 
 
 
+Object.assign(window, { openClass, openStore, openStats, openExplore, 
+                        updateClassTab, updateStoreTab
+ });
