@@ -41,7 +41,9 @@ function updateStoreTab() {
 function openExplore() { }
 
 function closeMenu(menu) {
-    document.getElementById(menu).style.display = "none";
+    document.getElementById("classes").style.display = "none";
+    document.getElementById("store").style.display = "none";
+    document.getElementById("stats").style.display = "none";
     document.getElementById("x").style.display = "none";
     document.getElementById("welcome").style.display = "block";
 }
