@@ -33,6 +33,10 @@ function updateStoreTab() {
 
 function openExplore() { }
 
+function closeMenu(menu) {
+    document.getElementById(menu).style.display = "none";
+    document.getElementById("welcome").style.display = "block";
+}
 
 
 Object.assign(window, { openClass, openStore, openStats, openExplore, 
