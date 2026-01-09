@@ -47,5 +47,5 @@ function updateStoreTab() {
 
 
 Object.assign(window, { openClass, openStore, openStats, openExplore, 
-                        updateClassTab, updateStoreTab
+                        updateClassTab, updateStoreTab, closeMenu
  });
