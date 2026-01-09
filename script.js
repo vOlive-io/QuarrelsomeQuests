@@ -28,7 +28,14 @@ function openStats() {
     document.getElementById("stats").style.display = "block";
     updateStatsTab();
 }
-
+function openExplore() { }
+function closeMenu(menu) {
+    document.getElementById("classes").style.display = "none";
+    document.getElementById("store").style.display = "none";
+    document.getElementById("stats").style.display = "none";
+    document.getElementById("x").style.display = "none";
+    document.getElementById("welcome").style.display = "block";
+}
 function updateClassTab() {
     const classTab = document.getElementById("classes");
     //to be implemented: display class selection and upgrades
@@ -36,16 +43,6 @@ function updateClassTab() {
 function updateStoreTab() {
     const storeTab = document.getElementById("store");
     //to be implemented: display store items and purchasing options
-}
-
-function openExplore() { }
-
-function closeMenu(menu) {
-    document.getElementById("classes").style.display = "none";
-    document.getElementById("store").style.display = "none";
-    document.getElementById("stats").style.display = "none";
-    document.getElementById("x").style.display = "none";
-    document.getElementById("welcome").style.display = "block";
 }
 
 
