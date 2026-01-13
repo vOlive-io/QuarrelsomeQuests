@@ -12,7 +12,8 @@ export const classes = [
             luck: 5,
             complexity: "Easy",
         },
-        bonusMoves: [],
+        weaponBuff: "Sword",
+        bonusMoves: ["Sword Swing", "Sword Leap", "Injured Stife", "Power Strike", "Whirlwind"],
         spells: [],
     },
     {
