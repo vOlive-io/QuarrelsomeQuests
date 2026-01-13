@@ -2,6 +2,7 @@ export const classes = [
     {
         name: "Warrior",
         selected: true,
+        unlocked: true,
         stats : {
             health: 150,
             attack: 10,
@@ -19,6 +20,7 @@ export const classes = [
     {
         name: "Mage",
         selected: false,
+        unlocked: true,
         stats : {
             health: 100,
             attack: 6,
@@ -29,6 +31,7 @@ export const classes = [
             luck: 10,
             complexity: "Moderate",
         },
+        weaponBuff: "Staff",
         bonusMoves: [],
         spells: [],
     },
