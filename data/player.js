@@ -1,7 +1,8 @@
 export const stats = [
     {
-        extraHelth: 10,
-        conpainion: {},
+        extraHealth: 10,
+        extraMana: 5,
+        companion: {},
         achievementPoints: 0,
         gold: 0,
     }
