@@ -7,10 +7,8 @@ export const moves = {
             player.energy -= 10;
             const damage = player.attack;
             target.hp -= damage;
-            console.log(`${player.name} swings sword for ${damage} damage!`
-);
+            console.log(`${player.name} swings sword for ${damage} damage!`);
         }
-        
     },
     "Sword Leap": (player, target) => {
         const damage = player.attack;
