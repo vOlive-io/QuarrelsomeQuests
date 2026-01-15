@@ -8,21 +8,17 @@ export const moves = {
             return player.attack * calculateBuff(player, "Sword");   
         }
     },
-
-
-
-
-
-
-
-
-    "Sword Leap": (player, target) => {
-        const damage = player.attack;
-        target.hp -= damage;
-        console.log(
-        `${player.name} leaps with sword for ${damage} damage!`
-        );
+    "Sword Leap": (player) => {
+        if(player.energy < 15) {
+            console.log("You do not have enough energy to perform Sword Leap!");
+            return;
+        } else {
+            player.energy -= 15;
+            return player.attack * calculateBuff(player, "Sword");   
+        }
     },
+
+
 
 
 };
