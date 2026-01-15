@@ -1,21 +1,19 @@
-export const classes = [
-    {
-        name: "Sword Swing",
-        run: function() {
-            console.log("Executing Sword Swing move!");
-        }
+export const moves = {
+    "Sword Swing": (attacker, target) => {
+        const damage = attacker.attack;
+        target.hp -= damage;
+        console.log(
+        `${attacker.name} swings sword for ${damage} damage!`
+        );
     },
-    {
-        name: "Sword Leap",
+    "Sword Leap": (attacker, target) => {
+        const damage = attacker.attack;
+        target.hp -= damage;
+        console.log(
+        `${attacker.name} leaps with sword for ${damage} damage!`
+        );
     },
-    {
-        name: "Injured Stife",
-    },
-    {
-        name: "Power Strike",
-    },
-    {
-        name: "Whirlwind",
-    },
-];
-console.log("✅ Moves loaded:", classes);
+
+
+};
+console.log("✅ Moves loaded:", moves);
