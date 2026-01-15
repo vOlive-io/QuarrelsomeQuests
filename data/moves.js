@@ -1,16 +1,22 @@
 export const moves = {
-    "Sword Swing": (attacker, target) => {
-        const damage = attacker.attack;
-        target.hp -= damage;
-        console.log(
-        `${attacker.name} swings sword for ${damage} damage!`
-        );
+    "Sword Swing": (player, target) => {
+        if(player.energy < 10) {
+            console.log(`${player.name} does not have enough energy to perform Sword Swing!`);
+            return;
+        } else {
+            player.energy -= 10;
+            const damage = player.attack;
+            target.hp -= damage;
+            console.log(`${player.name} swings sword for ${damage} damage!`
+);
+        }
+        
     },
-    "Sword Leap": (attacker, target) => {
-        const damage = attacker.attack;
+    "Sword Leap": (player, target) => {
+        const damage = player.attack;
         target.hp -= damage;
         console.log(
-        `${attacker.name} leaps with sword for ${damage} damage!`
+        `${player.name} leaps with sword for ${damage} damage!`
         );
     },
 
