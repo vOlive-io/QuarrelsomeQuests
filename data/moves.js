@@ -29,6 +29,26 @@ export const moves = {
             return (attackBaseDamage * player.attack) * calculateBuff(player, "Sword");   
         }
     },
+    "Power Strike": (player) => {
+        if(player.energy < 20) {
+            console.log("You do not have enough energy to perform Power Strike!");
+            return;
+        } else {
+            let attackBaseDamage = 2.5;
+            player.energy -= 20;
+            return (attackBaseDamage * player.attack) * calculateBuff(player, "Sword");   
+        }
+    },
+     "Whirlwind": (player) => {
+        if(player.energy < 25) {
+            console.log("You do not have enough energy to perform Whirlwind!");
+            return;
+        } else {
+            let attackBaseDamage = 3;
+            player.energy -= 25;
+            return (attackBaseDamage * player.attack) * calculateBuff(player, "Sword");   
+        }
+    },
 };
 
 function calculateBuff(player, weapon) {
