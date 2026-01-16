@@ -4,8 +4,9 @@ export const moves = {
             console.log("You do not have enough energy to perform Sword Swing!");
             return;
         } else {
+            let attackBaseDamage = 1.0;
             player.energy -= 10;
-            return player.attack * calculateBuff(player, "Sword");   
+            return (attackBAseDamage * player.attack) * calculateBuff(player, "Sword");   
         }
     },
     "Sword Leap": (player) => {
@@ -13,8 +14,9 @@ export const moves = {
             console.log("You do not have enough energy to perform Sword Leap!");
             return;
         } else {
+            let attackBaseDamage = 1.0;
             player.energy -= 15;
-            return player.attack * calculateBuff(player, "Sword");   
+            return (attackBAseDamage * player.attack) * calculateBuff(player, "Sword");   
         }
     },
 
