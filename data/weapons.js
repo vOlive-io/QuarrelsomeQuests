@@ -9,4 +9,3 @@ export const weapons = [
     },
 ];
 console.log("✅ Weapons are loaded:", classes);
- 
