@@ -52,6 +52,10 @@ function updateStoreTab() {
 ///////////////////////////
 //       PLAYER DEF      //
 ///////////////////////////
+var userInfo = {
+    playerName: "",
+    chosenClass: null,
+}
 var player = {
     health: 0,
     maxHealth: 0,
@@ -68,7 +72,15 @@ function updatePlayerStats() {
 }
 
 
-
+///////////////////////////
+//   HELPER FUNCTIONS    //
+///////////////////////////
+function getClassStats(className) {
+    for (let i = 0; i < classes.length; i++) {
+        if (classes[i].name === className) {
+            return classes[i].stats;
+        }
+}
 
 
 
