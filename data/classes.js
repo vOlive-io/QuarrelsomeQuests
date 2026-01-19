@@ -18,7 +18,7 @@ export const classes = [
             complexity: "Easy",
         },
         weaponBuff: "Sword",
-        bonusMoves: ["Sword Swing", "Sword Leap", "Injured Stife", "Power Strike", "Whirlwind"],
+        bonusMoves: ["Injured Stife"],
         spells: [],
     },
     {
