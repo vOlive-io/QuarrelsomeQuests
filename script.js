@@ -5,6 +5,9 @@
 import { stats } from "./data/player.js";
 import { store } from "./data/store.js";
 import { classes } from "./data/classes.js";
+import { weapons } from "./data/weapons.js";
+import { moves } from "./data/moves.js";
+import { spells } from "./data/spells.js";
 
 ///////////////////////////
 //       TAB NAV         //
