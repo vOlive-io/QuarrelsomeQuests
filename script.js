@@ -80,6 +80,7 @@ function getClassStats(className) {
         if (classes[i].name === className) {
             return classes[i].stats;
         }
+    }
 }
 
 
