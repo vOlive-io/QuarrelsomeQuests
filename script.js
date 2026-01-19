@@ -49,6 +49,28 @@ function updateStoreTab() {
     //to be implemented: display store items and purchasing options
 }
 
+///////////////////////////
+//       PLAYER DEF      //
+///////////////////////////
+var player = {
+    health: 0,
+    maxHealth: 0,
+    attack: 0,
+    defense: 0,
+    mana: 0,
+    energy: 0,
+    saturation: 0,
+    luck: 0,
+};
+function updatePlayerStats() {
+    //definse the class chonse value
+    player.maxHealth = stats.extraHealth+chosenClass.stats.health;
+}
+
+
+
+
+
 
 Object.assign(window, { openClass, openStore, openStats, openExplore, 
                         updateClassTab, updateStoreTab, closeMenu
