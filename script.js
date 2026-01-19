@@ -8,6 +8,7 @@ import { classes } from "./data/classes.js";
 import { weapons } from "./data/weapons.js";
 import { moves } from "./data/moves.js";
 import { spells } from "./data/spells.js";
+import { statuses } from "./data/effects.js";
 
 ///////////////////////////
 //       TAB NAV         //
