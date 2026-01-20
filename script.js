@@ -66,9 +66,26 @@ var player = {
     saturation: 0,
     luck: 0,
 };
-function updatePlayerStats() {
-    //definse the class chonse value
+function resetPlayerStats() {
+    const chosenClass = getClassStats(userInfo.chosenClass);
     player.maxHealth = stats.extraHealth+chosenClass.stats.health;
+    player.health = player.maxHealth;
+    player.attack = stats.extraAttack+chosenClass.stats.attack;
+    player.defense = stats.extraDefense+chosenClass.stats.defense;
+    player.mana = stats.extraMana+chosenClass.stats.mana;
+    player.energy = stats.extraEnergy+chosenClass.stats.energy;
+    player.saturation = stats.extraSaturation+chosenClass.stats.saturation;
+    player.luck = stats.extraLuck+chosenClass.stats.luck;
+}
+function updatePlayerStats() {
+    const chosenClass = getClassStats(userInfo.chosenClass);
+    player.maxHealth = stats.extraHealth+chosenClass.stats.health;
+    player.attack = stats.extraAttack+chosenClass.stats.attack;
+    player.defense = stats.extraDefense+chosenClass.stats.defense;
+    player.mana = stats.extraMana+chosenClass.stats.mana;
+    player.energy = stats.extraEnergy+chosenClass.stats.energy;
+    player.saturation = stats.extraSaturation+chosenClass.stats.saturation;
+    player.luck = stats.extraLuck+chosenClass.stats.luck;
 }
 
 
