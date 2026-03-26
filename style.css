@@ -5,6 +5,11 @@ body {
   background: linear-gradient(0deg,#ffbdfb, #dbedff, #e8ffee) fixed;
 
 }
+#rankBar {
+  background-color: #fcc74d;
+  height: 100%;
+  width: 0%;
+}
 
 #rankBarContainer {
   border: #966b06 solid 2px;
