@@ -4,7 +4,7 @@ export const cards = [
         selected: true,
         unlocked: true,
         class: "Warrior",
-        prestigeRequired: 100,
+        prestigeRequired: 12,
     },
     {
         name: "",
@@ -18,14 +18,14 @@ export const cards = [
         selected: false,
         unlocked: false,
         class: "Ranger",
-        prestigeRequired: 100,
+        prestigeRequired: 150,
     },
     {
         name: "",
         selected: false,
         unlocked: false,
         class: "Cleric",
-        prestigeRequired: 100,
+        prestigeRequired: 120,
     },
 ];
 console.log("✅ Cards loaded:", cards);
