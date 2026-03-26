@@ -93,6 +93,7 @@ function getNextRankValue() {
     for (let rank of values.ranks) {
         if (xpScaled < rank.value) {
             nextRankValue = rank.value;
+        } else {
             break;
         }
     }
