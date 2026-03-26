@@ -100,13 +100,18 @@ function getNextRankValue() {
 //    RANK DISPLAY FUNCTIONS    //
 //////////////////////////////////
 
+function updateRankSlates() {
+    updateRankInfo();
+    updateRankEmblum();
+    updateRankDisplay();
+}
+
 function updateRankInfo() {
     const rankName = document.getElementById("rankTitle");
     const rankProgress = document.getElementById("rankProgress");
     rankName.innerHTML = getPlayerRank();
     rankProgress.innerHTML = (player.xp + " / " + getNextRankValue());
 }
-
 
 function updateRankEmblum() {
     const rankEmblum = document.getElementById("rankEmblum");
@@ -135,6 +140,15 @@ function updateRankDisplay() {
     }
 }
 
-Object.assign(window, { openBattle, openStore, openRanks, 
-                        updateBattleTab, updateStoreTab, updateRanksTab, closeMenu
+
+
+
+Object.assign(window, { getClassStats, 
+                        getPlayerRank, 
+                        getRankImage, 
+                        getNextRankValue, 
+                        updateRankSlates, 
+                        updateRankInfo, 
+                        updateRankEmblum, 
+                        updateRankDisplay
  });
