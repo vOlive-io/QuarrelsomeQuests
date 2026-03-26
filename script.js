@@ -6,47 +6,10 @@ import { cards } from "./data/cards.js";
 import { classes } from "./data/classes.js";
 import { stats } from "./data/stats.js";
 import { store } from "./data/store.js";
+import { effects } from "./data/effects.js";
 //import { weapons } from "./data/weapons.js";
 //import { moves } from "./data/moves.js";
-import { effects } from "./data/effects.js";
 
-///////////////////////////
-//       TAB NAV         //
-///////////////////////////
-
-function openBattle() { 
-    document.getElementById("welcome").style.display = "none";
-    document.getElementById("x").style.display = "block";
-    document.getElementById("battle").style.display = "block";
-    updateBattleTab();
-}
-function openStore() {
-    document.getElementById("welcome").style.display = "none";
-    document.getElementById("x").style.display = "block";
-    document.getElementById("store").style.display = "block";
-    updateStoreTab();
-}
-function openRanks() { 
-    document.getElementById("welcome").style.display = "none";
-    document.getElementById("x").style.display = "block";
-    document.getElementById("ranks").style.display = "block";
-    updateRanksTab();
-}
-function closeMenu(menu) {
-    document.getElementById("battle").style.display = "none";
-    document.getElementById("store").style.display = "none";
-    document.getElementById("ranks").style.display = "none";
-    document.getElementById("x").style.display = "none";
-    document.getElementById("welcome").style.display = "block";
-}
-function updateBattleTab() {
-    const battleTab = document.getElementById("battle");
-    //to be implemented: display battle options and arena
-}
-function updateStoreTab() {
-    const storeTab = document.getElementById("store");
-    //to be implemented: display store items and purchasing options
-}
 
 ///////////////////////////
 //       PLAYER DEF      //
