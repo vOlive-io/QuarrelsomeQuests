@@ -5,6 +5,7 @@ export const classes = [
         //////////////////////////////////
         //Adds to 15
         name: "Warrior",
+        path: ["Warrior", "Brute", "Berserker"],
         selected: true,
         unlocked: true,
         stats : {
@@ -13,12 +14,10 @@ export const classes = [
             defense: 5,
             mana: 50,
         },
-        weaponBuff: "Sword",
-        bonusMoves: ["Injured Stife"],
-        spells: [],
     },
     {
         name: "Mage",
+        path: ["Mage", "Sorcerer", "Archmage"],
         selected: false,
         unlocked: true,
         stats : {
@@ -27,12 +26,10 @@ export const classes = [
             defense: 8,
             mana: 250,
         },
-        weaponBuff: "Staff",
-        bonusMoves: [],
-        spells: [],
     },
     {
         name: "Ranger",
+        path: ["Ranger", "Sharpshooter", "Stringer"],
         selected: false,
         unlocked: true,
         stats : {
@@ -41,12 +38,10 @@ export const classes = [
             defense: 6,
             mana: 100,
         },
-        weaponBuff: "Bow",
-        bonusMoves: [],
-        spells: [],
     },
     {
         name: "Cleric",
+        path: ["Cleric", "Priest", "Crusader"],
         selected: false,
         unlocked: false,
         stats : {
@@ -55,9 +50,6 @@ export const classes = [
             defense: 10,
             mana: 150,
         },
-        weaponBuff: "Bow",
-        bonusMoves: [],
-        spells: [],
     },
 ];
 console.log("✅ Classes loaded:", classes);
