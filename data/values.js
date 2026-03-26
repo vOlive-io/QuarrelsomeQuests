@@ -22,4 +22,4 @@ export const values =
             { title: "Unranked", value:  0,     image: "assets/ranks/Unranked.png" },
         ],
 };
-console.log("✅ Values are loaded:");    
+console.log("✅ Values Loaded:");    

@@ -3,6 +3,7 @@
 ///////////////////////////
 
 import { cards } from "./data/cards.js";
+import { values } from "./data/values.js";
 import { classes } from "./data/classes.js";
 import { stats } from "./data/player.js";
 import { store } from "./data/store.js";
