@@ -1,4 +1,4 @@
-export const pets = [
+export const cards = [
     {
         name: "",
         selected: true,
@@ -28,4 +28,4 @@ export const pets = [
         prestigeRequired: 100,
     },
 ];
-console.log("✅ Pets loaded:", pets);
+console.log("✅ Cards loaded:", cards);
