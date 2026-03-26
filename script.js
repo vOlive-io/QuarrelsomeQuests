@@ -14,11 +14,11 @@ import { store } from "./data/store.js";
 //       TAB NAV         //
 ///////////////////////////
 
-function openClass() { 
+function openBattle() { 
     document.getElementById("welcome").style.display = "none";
     document.getElementById("x").style.display = "block";
-    document.getElementById("classes").style.display = "block";
-    updateClassTab();
+    document.getElementById("battle").style.display = "block";
+    updateBattleTab();
 }
 function openStore() {
     document.getElementById("welcome").style.display = "none";
@@ -26,17 +26,16 @@ function openStore() {
     document.getElementById("store").style.display = "block";
     updateStoreTab();
 }
-function openStats() { 
+function openRanks() { 
     document.getElementById("welcome").style.display = "none";
     document.getElementById("x").style.display = "block";
-    document.getElementById("stats").style.display = "block";
-    updateStatsTab();
+    document.getElementById("ranks").style.display = "block";
+    updateRanksTab();
 }
-function openExplore() { }
 function closeMenu(menu) {
-    document.getElementById("classes").style.display = "none";
+    document.getElementById("battle").style.display = "none";
     document.getElementById("store").style.display = "none";
-    document.getElementById("stats").style.display = "none";
+    document.getElementById("ranks").style.display = "none";
     document.getElementById("x").style.display = "none";
     document.getElementById("welcome").style.display = "block";
 }
