@@ -1,6 +1,7 @@
 export const stats = [
     {
         gold: 0,
+        xp: 100,
         pets: {},
         items: {},
         quests: {},

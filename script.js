@@ -99,6 +99,12 @@ function getClassStats(className) {
     }
 }
 
+function updateRank() {
+    if(player.xp / 100 >= values.SSSRankValue) {
+        player.rankTitle = "SSS";
+    }
+}
+
 
 Object.assign(window, { openBattle, openStore, openRanks, 
                         updateBattleTab, updateStoreTab, updateRanksTab, closeMenu
