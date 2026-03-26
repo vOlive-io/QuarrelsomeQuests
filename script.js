@@ -128,7 +128,7 @@ function updateRankBar() {
     var rankDisplay = document.getElementById("rankBar");  
     var goal = getNextRankValue();
     console.log("goal:", goal);
-    var progress = ((player.xp) / goal);
+    var progress = ((player.xp) / goal) * 100;
     var width = 0;
     var rep = setInterval(scale, 10);
     function scale() {
