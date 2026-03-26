@@ -4,7 +4,7 @@
 
 import { cards } from "./data/cards.js";
 import { classes } from "./data/classes.js";
-import { stats } from "./data/stats.js";
+import { stats } from "./data/player.js";
 import { store } from "./data/store.js";
 import { effects } from "./data/effects.js";
 //import { weapons } from "./data/weapons.js";
