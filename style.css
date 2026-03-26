@@ -6,9 +6,12 @@ body {
 
 }
 
-#rankBar {
+#rankBarContainer {
   border: #966b06 solid 2px;
   background-color: #ddd;
+  width: 90%;
+  height: 30px;
+  margin: 20px auto;
 }
 
 
