@@ -12,7 +12,7 @@ body {
   margin: auto;
   height: 100%;
 }
-#classes, #explore, #store, #prestige, #stats {
+#welcome, #battle, #store, #prestige, #ranks {
   display: none;
 }
 #head-text {
