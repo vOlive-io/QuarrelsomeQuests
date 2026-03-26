@@ -22,7 +22,7 @@ var userInfo = {
     chosenClass: null,
 }
 var player = {
-    xp: 0,
+    xp: 1,
     rankTitle: "",
     health: 0,
     maxHealth: 0,
