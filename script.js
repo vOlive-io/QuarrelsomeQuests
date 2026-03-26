@@ -39,9 +39,9 @@ function closeMenu(menu) {
     document.getElementById("x").style.display = "none";
     document.getElementById("welcome").style.display = "block";
 }
-function updateClassTab() {
-    const classTab = document.getElementById("classes");
-    //to be implemented: display class selection and upgrades
+function updateBattleTab() {
+    const battleTab = document.getElementById("battle");
+    //to be implemented: display battle options and arena
 }
 function updateStoreTab() {
     const storeTab = document.getElementById("store");
@@ -100,7 +100,6 @@ function getClassStats(className) {
 }
 
 
-
-Object.assign(window, { openClass, openStore, openStats, openExplore, 
-                        updateClassTab, updateStoreTab, closeMenu
+Object.assign(window, { openBattle, openStore, openRanks, 
+                        updateBattleTab, updateStoreTab, updateRanksTab, closeMenu
  });
