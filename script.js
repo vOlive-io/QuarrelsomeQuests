@@ -100,8 +100,15 @@ function getNextRankValue() {
 //    RANK DISPLAY FUNCTIONS    //
 //////////////////////////////////
 
+function updateRankInfo() {
+    const rankName = document.getElementById("rankTitle");
+    const rankProgress = document.getElementById("rankProgress");
+    var rankImg = getRankImage();
+    rankEmblum.src = rankImg;
+}
 
-function changeRankEmblum() {
+
+function updateRankEmblum() {
     const rankEmblum = document.getElementById("rankEmblum");
     var rankImg = getRankImage();
     rankEmblum.src = rankImg;
