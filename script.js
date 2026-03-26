@@ -62,8 +62,72 @@ function getClassStats(className) {
     }
 }
 
+function getPlayerRank() {
+    const xpScaled = player.xp / 100;
+    let ranks = values.ranks;
+    for (let rank of ranks) {
+        if (xpScaled >= rank.value) {
+            return player.rankTitle = rank.title;
+        }
+    }
+}
+
+function getRankImage() {
+    const xpScaled = player.xp / 100;
+    let ranks = values.ranks;
+    for (let rank of ranks) {
+        if (xpScaled >= rank.value) {
+            return rank.image;
+        }
+    }
+}
+
+function getNextRankValue() {
+    const xpScaled = player.xp / 100;
+    let nextRankValue = 0;
+    for (let rank of ranks) {
+        if (xpScaled < values.ranks.value) {
+            nextRankValue = values.ranks.value;
+        } else {
+            break;
+        }
+    }
+    return (nextRankValue*100);
+}
+
+
+//////////////////////////////////
+//    RANK DISPLAY FUNCTIONS    //
+//////////////////////////////////
+
+
+function changeRankEmblum() {
+    const rankEmblum = document.getElementById("rankEmblum");
+    var rankImg = getRankImage();
+    rankEmblum.src = rankImg;
+}
+
+
+
 function updateRankDisplay() {
-    
+    var rankDisplay = document.getElementById("rankBar");  
+    var goal = getNextRankValue();
+    var progress = ((player.xp) / goal) * 100;
+    var width = 0;
+    var rep = setInterval(scale, 10);
+    function scale() {
+        if (width >= progress) {
+            clearInterval(rep);
+        } else {
+            if(width+1 > progress) {
+                width = progress;
+            } else {
+                width++;
+            }
+            rankDisplay.style.width = width + '%';
+            rankDisplay.innerHTML = (width * 1  + '%');
+        }
+    }
 }
 
 Object.assign(window, { openBattle, openStore, openRanks, 
