@@ -13,4 +13,4 @@ export const store = {
         epic: [],
         legendary: [],  
 };
-console.log("✅ Store is loaded:", store);
+console.log("✅ Store loaded:");

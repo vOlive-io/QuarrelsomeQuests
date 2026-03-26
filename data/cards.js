@@ -28,4 +28,4 @@ export const cards = [
         prestigeRequired: 120,
     },
 ];
-console.log("✅ Cards loaded:", cards);
+console.log("✅ Cards loaded");

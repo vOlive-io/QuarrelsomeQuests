@@ -59,4 +59,4 @@ function calculateBuff(player, weapon) {
     return buff;
 }
 
-console.log("✅ Moves loaded:", moves);
+console.log("✅ Moves loaded:");

@@ -1,4 +1,4 @@
-export const statuses = [
+export const effects = [
     {
         name: "Strength Buff",
         type: "Attack",
@@ -6,4 +6,4 @@ export const statuses = [
         duration: 300,
     },
 ];
-console.log("✅ Statuses are loaded:", statuses);
+console.log("✅ Effects loaded:");

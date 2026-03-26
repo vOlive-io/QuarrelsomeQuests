@@ -9,4 +9,4 @@ export const stats = [
     }
 
 ];
-console.log("✅ Player Stats are loaded:", store);
+console.log("✅ Player Stats loaded");
