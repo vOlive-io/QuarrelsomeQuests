@@ -103,8 +103,8 @@ function getNextRankValue() {
 function updateRankInfo() {
     const rankName = document.getElementById("rankTitle");
     const rankProgress = document.getElementById("rankProgress");
-    var rankImg = getRankImage();
-    rankEmblum.src = rankImg;
+    rankName.innerHTML = getPlayerRank();
+    rankProgress.innerHTML = (player.xp + " / " + getNextRankValue());
 }
 
 
