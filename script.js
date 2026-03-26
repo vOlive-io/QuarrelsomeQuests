@@ -2,13 +2,13 @@
 //       IMPORTS         //
 ///////////////////////////
 
-import { stats } from "./data/player.js";
-import { store } from "./data/store.js";
+import { cards } from "./data/cards.js";
 import { classes } from "./data/classes.js";
-import { weapons } from "./data/weapons.js";
-import { moves } from "./data/moves.js";
-import { spells } from "./data/spells.js";
-import { statuses } from "./data/effects.js";
+import { stats } from "./data/stats.js";
+import { store } from "./data/store.js";
+//import { weapons } from "./data/weapons.js";
+//import { moves } from "./data/moves.js";
+//import { statuses } from "./data/effects.js";
 
 ///////////////////////////
 //       TAB NAV         //
