@@ -11,6 +11,8 @@ import { effects } from "./data/effects.js";
 //import { weapons } from "./data/weapons.js";
 //import { moves } from "./data/moves.js";
 
+console.log("VALUES:", values);
+console.log("RANKS:", values.ranks);
 
 ///////////////////////////
 //       PLAYER DEF      //
@@ -20,6 +22,8 @@ var userInfo = {
     chosenClass: null,
 }
 var player = {
+    xp: 0,
+    rankTitle: "",
     health: 0,
     maxHealth: 0,
     attack: 0,
@@ -66,7 +70,7 @@ function getClassStats(className) {
 function getPlayerRank() {
     const xpScaled = player.xp / 100;
     let ranks = values.ranks;
-    for (let rank of ranks) {
+    for (let rank of values.ranks) {
         if (xpScaled >= rank.value) {
             return player.rankTitle = rank.title;
         }
@@ -76,7 +80,7 @@ function getPlayerRank() {
 function getRankImage() {
     const xpScaled = player.xp / 100;
     let ranks = values.ranks;
-    for (let rank of ranks) {
+    for (let rank of values.ranks) {
         if (xpScaled >= rank.value) {
             return rank.image;
         }
@@ -86,10 +90,9 @@ function getRankImage() {
 function getNextRankValue() {
     const xpScaled = player.xp / 100;
     let nextRankValue = 0;
-    for (let rank of ranks) {
-        if (xpScaled < values.ranks.value) {
-            nextRankValue = values.ranks.value;
-        } else {
+    for (let rank of values.ranks) {
+        if (xpScaled < rank.value) {
+            nextRankValue = rank.value;
             break;
         }
     }
@@ -123,7 +126,8 @@ function updateRankEmblum() {
 function updateRankBar() {
     var rankDisplay = document.getElementById("rankBar");  
     var goal = getNextRankValue();
-    var progress = ((player.xp) / goal) * 100;
+    console.log("goal:", goal);
+    var progress = ((player.xp) / goal);
     var width = 0;
     var rep = setInterval(scale, 10);
     function scale() {
