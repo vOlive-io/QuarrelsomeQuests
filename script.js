@@ -148,8 +148,8 @@ Object.assign(window, { getClassStats,
                         getPlayerRank, 
                         getRankImage, 
                         getNextRankValue, 
-                        updateRankSlates, 
+                        updateRankDisplay, 
                         updateRankInfo, 
                         updateRankEmblum, 
-                        updateRankDisplay
+                        updateRankBar
  });
