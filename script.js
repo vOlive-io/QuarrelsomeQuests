@@ -107,8 +107,6 @@ function changeRankEmblum() {
     rankEmblum.src = rankImg;
 }
 
-
-
 function updateRankDisplay() {
     var rankDisplay = document.getElementById("rankBar");  
     var goal = getNextRankValue();
