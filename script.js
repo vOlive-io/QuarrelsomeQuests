@@ -99,44 +99,8 @@ function getClassStats(className) {
     }
 }
 
-function updateRank() {
-    if(player.xp / 100 >= values.SSSPLusRankValue) {
-        player.rankTitle = "SSS+";
-    } else if(player.xp / 100 >= values.SSSRankValue) {
-        player.rankTitle = "SSS";
-    } else if(player.xp / 100 >= values.SSSMinusRankValue) {
-        player.rankTitle = "SSS-";
-    } else if(player.xp / 100 >= values.SSPlusRankValue) {
-        player.rankTitle = "SS+";
-    } else if(player.xp / 100 >= values.SSRankValue) {
-        player.rankTitle = "SS";
-    } else if(player.xp / 100 >= values.SSMinusRankValue) {
-        player.rankTitle = "SS-";
-    } else if(player.xp / 100 >= values.SPlusRankValue) {
-        player.rankTitle = "S+";
-    } else if(player.xp / 100 >= values.SRankValue) {
-        player.rankTitle = "S";
-    } else if(player.xp / 100 >= values.SMinusRankValue) {
-        player.rankTitle = "S-";
-    } else if(player.xp / 100 >= values.APlusRankValue) {
-        player.rankTitle = "A+";
-    } else if(player.xp / 100 >= values.ARankValue) {
-        player.rankTitle = "A";
-    } else if(player.xp / 100 >= values.AMinusRankValue) {
-        player.rankTitle = "A-";
-    } else if(player.xp / 100 >= values.BPlusRankValue) {
-        player.rankTitle = "B+";
-    } else if(player.xp / 100 >= values.BRankValue) {
-        player.rankTitle = "B";
-    } else if(player.xp / 100 >= values.BMinusRankValue) {
-        player.rankTitle = "B-";
-    } else if(player.xp / 100 >= values.CPlusRankValue) {
-        player.rankTitle = "C+";
-    } else if(player.xp / 100 >= values.CRankValue) {
-        player.rankTitle = "C";
-    } else {
-        player.rankTitle = "C-";
-    }
+function updateRankDisplay() {
+    
 }
 
 Object.assign(window, { openBattle, openStore, openRanks, 
