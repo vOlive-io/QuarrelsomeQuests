@@ -101,10 +101,10 @@ function getNextRankValue() {
 //    RANK DISPLAY FUNCTIONS    //
 //////////////////////////////////
 
-function updateRankSlates() {
+function updateRankDisplay() {
     updateRankInfo();
     updateRankEmblum();
-    updateRankDisplay();
+    updateRankBar();
 }
 
 function updateRankInfo() {
@@ -120,7 +120,7 @@ function updateRankEmblum() {
     rankEmblum.src = rankImg;
 }
 
-function updateRankDisplay() {
+function updateRankBar() {
     var rankDisplay = document.getElementById("rankBar");  
     var goal = getNextRankValue();
     var progress = ((player.xp) / goal) * 100;
