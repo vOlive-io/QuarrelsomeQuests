@@ -1,4 +1,4 @@
-export const values = [
+export const values = 
     {
         ranks: [
             { title: "SSS+",     value:  1000,  image: "assets/ranks/SSS+.png"},
@@ -21,6 +21,5 @@ export const values = [
             { title: "C-",       value:  1,     image: "assets/ranks/C-.png"},
             { title: "Unranked", value:  0,     image: "assets/ranks/Unranked.png" },
         ],
-    }
-];
-console.log("✅ Values Stats are loaded:", values);    
+};
+console.log("✅ Values are loaded:");    
