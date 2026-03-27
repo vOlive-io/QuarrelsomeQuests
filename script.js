@@ -59,6 +59,10 @@ function updatePlayerStats() {
 ///////////////////////////
 //   HELPER FUNCTIONS    //
 ///////////////////////////
+
+function setXp(amount) {
+    player.xp = amount;
+}
 function getClassStats(className) {
     for (let i = 0; i < classes.length; i++) {
         if (classes[i].name === className) {
@@ -121,7 +125,7 @@ function updateRankInfo() {
 function updateRankEmblum() {
     const rankEmblum = document.getElementById("rankEmblum");
     var rankImg = getRankImage();
-    rankEmblum.src = rankImg;
+    rankEmblum.src = "data/" + rankImg;
 }
 
 function updateRankBar() {
@@ -156,5 +160,6 @@ Object.assign(window, { getClassStats,
                         updateRankDisplay, 
                         updateRankInfo, 
                         updateRankEmblum, 
-                        updateRankBar
+                        updateRankBar,
+                        setXp
  });
