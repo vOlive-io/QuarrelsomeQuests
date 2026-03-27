@@ -17,12 +17,14 @@ console.log("RANKS:", values.ranks);
 ///////////////////////////
 //       PLAYER DEF      //
 ///////////////////////////
+var rankBarWidth = 0;
 var userInfo = {
     playerName: "",
     chosenClass: null,
 }
 var player = {
     xp: 1,
+    rank: 0,
     rankTitle: "",
     health: 0,
     maxHealth: 0,
@@ -59,10 +61,6 @@ function updatePlayerStats() {
 ///////////////////////////
 //   HELPER FUNCTIONS    //
 ///////////////////////////
-
-function setXp(amount) {
-    player.xp = amount;
-}
 function getClassStats(className) {
     for (let i = 0; i < classes.length; i++) {
         if (classes[i].name === className) {
@@ -71,29 +69,51 @@ function getClassStats(className) {
     }
 }
 
+function setXp(amount) {
+    player.xp = amount;
+}
+function addxp(amount) {
+    player.xp += amount;
+    if (player.xp > getPlayerRank().upgrade) {
+        promotePlayer();
+    }
+}
+function promotePlayer() {
+    player.rank++;
+    player.xp = Math.floor(getNextRankValue() / 5);
+    if (player.rank >= values.ranks.length) {
+        player.rank = values.ranks.length - 1;    
+    }
+}
+function removeXp(amount) {
+    player.xp -= amount;
+    if (player.xp < 0) {
+        demotePlayer();
+    }
+}
+function demotePlayer() {
+    player.rank--;
+    player.xp = Math.floor(getNextRankValue() / 5) * 3;
+    if (player.rank < 0) {
+        player.rank = 0;
+        player.xp = 0;
+    }
+}
 function getPlayerRank() {
-    const xpScaled = player.xp / 100;
-    let ranks = values.ranks;
-    for (let rank of values.ranks) {
-        if (xpScaled >= rank.value) {
-            return player.rankTitle = rank.title;
-        }
-    }
+    return values.ranks[player.rank];
 }
-
-function getRankImage() {
-    const xpScaled = player.xp / 100;
-    let ranks = values.ranks;
-    for (let rank of values.ranks) {
-        if (xpScaled >= rank.value) {
-            return rank.image;
-        }
-    }
+function getRankTitle() {
+    let playerRank = getPlayerRank();
+    let title = playerRank.title;
+    console.log(title);
+    if((playerRank.upgrade/3) >= player.xp) {title += "-";}
+    if((playerRank.upgrade/3)*2 <= player.xp) {title += "+";}
+    console.log(title);
+    return title;
 }
-
 function getNextRankValue() {
     const xpScaled = player.xp / 100;
-    let nextRankValue = 0;
+    let nextRankValue = values.ranks[0].value;
     for (let rank of values.ranks) {
         if (xpScaled < rank.value) {
             nextRankValue = rank.value;
@@ -108,54 +128,56 @@ function getNextRankValue() {
 //////////////////////////////////
 //    RANK DISPLAY FUNCTIONS    //
 //////////////////////////////////
-
 function updateRankDisplay() {
     updateRankInfo();
     updateRankEmblum();
     updateRankBar();
 }
-
 function updateRankInfo() {
     const rankName = document.getElementById("rankTitle");
     const rankProgress = document.getElementById("rankProgress");
-    rankName.innerHTML = getPlayerRank();
-    rankProgress.innerHTML = (player.xp + " / " + getNextRankValue());
+    let playerRank = getPlayerRank();
+    console.log(playerRank);
+    rankName.innerHTML = getRankTitle();
+    rankProgress.innerHTML = (player.xp + " / " + playerRank.upgrade);
 }
-
 function updateRankEmblum() {
     const rankEmblum = document.getElementById("rankEmblum");
-    var rankImg = getRankImage();
-    rankEmblum.src = "data/" + rankImg;
+    rankEmblum.src = "data/assets/" + getRankTitle() + ".png";
 }
-
 function updateRankBar() {
     var rankDisplay = document.getElementById("rankBar");  
-    var goal = getNextRankValue();
-    console.log("goal:", goal);
-    var progress = ((player.xp) / goal) * 100;
-    var width = 0;
-    var rep = setInterval(scale, 10);
+    var goal = getPlayerRank().upgrade; //the xp needed to reach the next rank
+    var progress = ((player.xp) / goal) * 100; //the percentage of completion
+    var rep = setInterval(scale, 1); //the animation speed
     function scale() {
-        if (width >= progress) {
-            clearInterval(rep);
-        } else {
-            if(width+1 > progress) {
-                width = progress;
+        if(rankBarWidth >= progress) {
+            if(rankBarWidth-0.1 < progress) {
+                rankBarWidth = progress;
+                clearInterval(rep);
             } else {
-                width++;
+                rankBarWidth-=0.1;
             }
-            rankDisplay.style.width = width + '%';
-            rankDisplay.innerHTML = (width * 1  + '%');
+        } else if (rankBarWidth <= progress) {
+            if(rankBarWidth+0.1 > progress) {
+                rankBarWidth = progress;
+                clearInterval(rep);
+            } else {
+                rankBarWidth+=0.1;
+            }
+    
+            if (rankBarWidth >= 100) {
+                rankDisplay.style.width = 100 + '%';
+            } else {
+                rankDisplay.style.width = rankBarWidth + '%';
+            }
+            rankDisplay.innerHTML = Math.floor(rankBarWidth*100) / 100+ '%';
         }
     }
 }
 
-
-
-
 Object.assign(window, { getClassStats, 
                         getPlayerRank, 
-                        getRankImage, 
                         getNextRankValue, 
                         updateRankDisplay, 
                         updateRankInfo, 

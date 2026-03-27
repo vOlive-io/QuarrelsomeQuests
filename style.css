@@ -20,13 +20,24 @@ body {
 }
 
 #rankEmblum {
-  height: 50%;
-  width: 50%;
+  height: 100%;
+  width: 100%;
+  margin: -10%;
 }
 
-.split {
+.rankDisplayContainer {
   height: 100%;
-  width: 50%;
+  width: 30%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.gameDisplayContainer {
+  height: 100%;
+  width: 70%;
   position: fixed;
   z-index: 1;
   top: 0;
