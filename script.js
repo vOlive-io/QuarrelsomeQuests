@@ -72,24 +72,28 @@ function getClassStats(className) {
 function setXp(amount) {
     player.xp = amount;
 }
-function addxp(amount) {
+function addXp(amount) {
     player.xp += amount;
     if (player.xp > getPlayerRank().upgrade) {
         promotePlayer();
     }
+    updateRankDisplay();
 }
 function promotePlayer() {
     player.rank++;
-    player.xp = Math.floor(getNextRankValue() / 5);
-    if (player.rank >= values.ranks.length) {
-        player.rank = values.ranks.length - 1;    
+    if(!(player.rank >= values.ranks.length)) {
+        player.xp = Math.floor(getPlayerRank().upgrade / 5);
+    } else {
+        player.rank = values.ranks.length - 1; 
     }
+
 }
 function removeXp(amount) {
     player.xp -= amount;
     if (player.xp < 0) {
         demotePlayer();
     }
+    updateRankDisplay();
 }
 function demotePlayer() {
     player.rank--;
@@ -152,36 +156,40 @@ function updateRankBar() {
     var rep = setInterval(scale, 1); //the animation speed
     function scale() {
         if(rankBarWidth >= progress) {
-            if(rankBarWidth-0.1 < progress) {
+            if(rankBarWidth-0.1 <= progress) {
                 rankBarWidth = progress;
                 clearInterval(rep);
             } else {
                 rankBarWidth-=0.1;
             }
         } else if (rankBarWidth <= progress) {
-            if(rankBarWidth+0.1 > progress) {
+            if(rankBarWidth+0.1 >= progress) {
                 rankBarWidth = progress;
                 clearInterval(rep);
             } else {
                 rankBarWidth+=0.1;
             }
-    
-            if (rankBarWidth >= 100) {
-                rankDisplay.style.width = 100 + '%';
-            } else {
-                rankDisplay.style.width = rankBarWidth + '%';
-            }
-            rankDisplay.innerHTML = Math.floor(rankBarWidth*100) / 100+ '%';
         }
+        if (rankBarWidth >= 100) {
+            rankDisplay.style.width = 100 + '%';
+        } else {
+            rankDisplay.style.width = rankBarWidth + '%';
+        }
+        rankDisplay.innerHTML = Math.floor(rankBarWidth*100) / 100+ '%';
     }
 }
 
-Object.assign(window, { getClassStats, 
-                        getPlayerRank, 
-                        getNextRankValue, 
-                        updateRankDisplay, 
-                        updateRankInfo, 
-                        updateRankEmblum, 
+Object.assign(window, { setXp,
+                        addXp,
+                        removeXp,
+                        promotePlayer,
+                        demotePlayer,
+                        getPlayerRank,
+                        getRankTitle,
+                        getNextRankValue,
+                        updateRankDisplay,
+                        updateRankInfo,
+                        updateRankEmblum,
                         updateRankBar,
-                        setXp
+                        
  });
