@@ -19,6 +19,10 @@ body {
   margin: 20px auto;
 }
 
+#rankEmblum {
+  height: 20%;
+  width: 20%;
+}
 
 .split {
   height: 100%;
