@@ -18,7 +18,7 @@ export const values = {
         { title: "C+",       value:  .50,     image: "assets/ranks/C+.png"},
         { title: "C",        value:  .25,     image: "assets/ranks/C.png"},
         { title: "C-",       value:  .1,      image: "assets/ranks/C-.png"},
-        { title: "Unranked", value:  0,       image: "assets/ranks/Unranked.png" },
+        { title: "Unranked", value:  0,       image: "assets/ranks/C-.png" },
         ],
 };
 console.log("✅ Values Loaded", values);    
