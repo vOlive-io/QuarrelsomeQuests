@@ -74,9 +74,9 @@ function setXp(amount) {
 }
 function addXp(amount) {
     player.xp += amount;
-    if (player.xp > getPlayerRank().upgrade) {
+    if (player.xp >= getPlayerRank().upgrade) {
         promotePlayer();
-    }
+    } 
     updateRankDisplay();
 }
 function promotePlayer() {
@@ -147,7 +147,7 @@ function updateRankInfo() {
 }
 function updateRankEmblum() {
     const rankEmblum = document.getElementById("rankEmblum");
-    rankEmblum.src = "data/assets/" + getRankTitle() + ".png";
+    rankEmblum.src = "data/assets/ranks/" + getRankTitle() + ".png";
 }
 function updateRankBar() {
     var rankDisplay = document.getElementById("rankBar");  
@@ -175,6 +175,8 @@ function updateRankBar() {
         } else {
             rankDisplay.style.width = rankBarWidth + '%';
         }
+        let nextRank = values.ranks[player.rank + 1] || values.ranks[player.rank];
+        rankDisplay.style.background = `linear-gradient(90deg, ${getPlayerRank().color} 0%, ${getPlayerRank().color} 50%, ${nextRank.color} 100%)`
         rankDisplay.innerHTML = Math.floor(rankBarWidth*100) / 100+ '%';
     }
 }
