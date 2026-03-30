@@ -1,12 +1,12 @@
 export const moves = {
-     "Sword Miss": {
+    "Sword Miss": {
           baseDamage: 0,
           specialText: (player) => {
                player.stats.swordMissCount = (player.stats.swordMissCount || 0) + 1;
                return `${player.ActiveCard.name} tries to swing their sword at ${player.ActiveEvil}, but MISSES!`;
           }
      },
-     "Sword Swing": {
+    "Sword Swing": {
         baseDamage: 10,
         specialText: (player) => {
             player.stats.swordSwingCount = (player.stats.swordSwingCount || 0) + 1;
@@ -68,29 +68,62 @@ export const moves = {
             return `${player.ActiveCard.name} impales ${player.ActiveEvil} in the ${bodyPart}!`;
         }
     },
-    "Sword Flury": {
+    "Sword Flurry": {
         baseDamage: 30,
         specialText: (player) => {
-            player.stats.swordFluryCount = (player.stats.swordFluryCount || 0) + 1;
+            player.stats.swordFlurryCount = (player.stats.swordFlurryCount || 0) + 1;
             let bodyParts = ["left arm", "right arm", "left leg", "right leg", "butt", "hand", "toe", "nose", "hair", "fingers"];
             let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
             return `${player.ActiveCard.name} swings their sword in a flury of rage, chopping off ${player.ActiveEvil}'s ${bodyPart}!`;
         }
     },
-     "Spear Miss": {
+    "Spear Miss": {
         baseDamage: 0,
         specialText: (player) => {
             player.stats.spearMissCount = (player.stats.spearMissCount || 0) + 1;
             return `${player.ActiveCard.name} jabs their spear forward, but misses!`;
         }
     },
-     "Spear Stab": {
+    "Spear Lunge": {
+        baseDamage: 10,
+        specialText: (player) => {
+            player.stats.spearLungeCount = (player.stats.spearLungeCount || 0) + 1;
+            return `${player.ActiveCard.name} lunges forward with their spear, stabbing ${player.ActiveEvil}!`;
+        }
+    },
+    "Spear Charge": {
+        baseDamage: 10,
+        specialText: (player) => {
+            player.stats.spearChargeCount = (player.stats.spearChargeCount || 0) + 1;
+            return `${player.ActiveCard.name} charges forward with their spear, stabbing ${player.ActiveEvil}!`;
+        }
+    },
+    "Spear Stab": {
         baseDamage: 10,
         specialText: (player) => {
             player.stats.spearStabCount = (player.stats.spearStabCount || 0) + 1;
             let bodyParts = ["left arm", "right arm", "left leg", "right leg", "butt", "hand", "toe", "nose", "hair", "fingers"];
             let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
             return `${player.ActiveCard.name} jabs their spear forward, stabbing ${player.ActiveEvil}'s ${bodyPart}!`;
+        }
+    },
+    "Spear Impale": {
+        baseDamage: 20,
+        specialText: (player) => {
+            player.stats.spearImpaleCount = (player.stats.spearImpaleCount || 0) + 1;
+            let bodyParts = ["left arm", "right arm", "left leg", "right leg", "butt", "hand", "toe", "nose", "fingers"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            return `${player.ActiveCard.name} jabs their spear forward, ripping through ${player.ActiveEvil}'s ${bodyPart}!`;
+        }
+    },
+    "Spear Flurry": {
+        baseDamage: 30,
+        specialText: (player) => {
+            player.stats.spearFlurryCount = (player.stats.spearFlurryCount || 0) + 1;
+            let bodyParts = ["left arm", "right arm", "left leg", "right leg", "butt", "hand", "toe", "nose",, "fingers"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length-1)];
+            let bodyPart2 = bodyParts[Math.floor(Math.random() * bodyParts.length-1)+1];
+            return `${player.ActiveCard.name} charges forward in a flurry of strikes, ripping off ${player.ActiveEvil}'s ${bodyPart}, and stabbing ${player.ActiveEvil}'s ${bodyPart2}!`;
         }
     },
 }
