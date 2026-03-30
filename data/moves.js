@@ -199,7 +199,7 @@ export const moves = {
             let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
             return `${player.ActiveCard.name} shoots an arrow, then shoots another arrow, hitting the first arrow making it speed up and impale ${player.ActiveEvil}'s ${bodyPart}!`;
         }
-
+    }
 }
 
 console.log("✅ Moves Loaded");
