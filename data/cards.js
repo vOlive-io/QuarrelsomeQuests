@@ -1,10 +1,12 @@
 export const cards = [
     {
-        name: "",
+        name: "Squire",
         selected: true,
         unlocked: true,
         class: "Warrior",
-        prestigeRequired: 12,
+        prestigeRequired: 120,
+        prestigeLevel: 1,
+        moveSet: ["knight", "nobel"]
     },
     {
         name: "",
