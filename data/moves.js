@@ -1,4 +1,5 @@
 export const moves = {
+    /////    Sword    /////
     "Sword Miss": {
           baseDamage: 0,
           specialText: (player) => {
@@ -77,6 +78,8 @@ export const moves = {
             return `${player.ActiveCard.name} swings their sword in a flury of rage, chopping off ${player.ActiveEvil}'s ${bodyPart}!`;
         }
     },
+
+    /////    Spear    /////
     "Spear Miss": {
         baseDamage: 0,
         specialText: (player) => {
@@ -116,6 +119,15 @@ export const moves = {
             return `${player.ActiveCard.name} jabs their spear forward, ripping through ${player.ActiveEvil}'s ${bodyPart}!`;
         }
     },
+    "Fake Out (Spear)": {
+        baseDamage: 20,
+        specialText: (player) => {
+            player.stats.spearFakeOutCount = (player.stats.spearFakeOutCount || 0) + 1;
+            let bodyParts = ["arm", "guts", "butt", "leg", "foot", "hand", "toe"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            return `${player.ActiveCard.name} fakes out ${player.ActiveEvil}, and then stabs them in the ${bodyPart}!`;
+        }
+    },
     "Spear Flurry": {
         baseDamage: 30,
         specialText: (player) => {
@@ -126,6 +138,68 @@ export const moves = {
             return `${player.ActiveCard.name} charges forward in a flurry of strikes, ripping off ${player.ActiveEvil}'s ${bodyPart}, and stabbing ${player.ActiveEvil}'s ${bodyPart2}!`;
         }
     },
+
+    /////    Bow    /////
+    "Bow Miss": {
+        baseDamage: 0,
+        specialText: (player) => {
+            player.stats.bowMissCount = (player.stats.bowMissCount || 0) + 1;
+            return `${player.ActiveCard.name} shoots an arrow at ${player.ActiveEvil}, but misses!`;
+        }
+    },
+    "Bow Shot": {
+        baseDamage: 10,
+        specialText: (player) => {
+            player.stats.bowShotCount = (player.stats.bowShotCount || 0) + 1;
+            return `${player.ActiveCard.name} shoots an arrow at ${player.ActiveEvil}!`;
+        }
+    },
+    "Bow Power Shot": {
+        baseDamage: 15,
+        specialText: (player) => {
+            player.stats.bowPowerShotCount = (player.stats.bowPowerShotCount || 0) + 1;
+            return `${player.ActiveCard.name} takes careful aim and shoots a powerful arrow at ${player.ActiveEvil}!`;
+        }
+    },
+    "Bow Flurry": {
+        baseDamage: 20,
+        specialText: (player) => {
+            player.stats.bowFlurryCount = (player.stats.bowFlurryCount || 0) + 1;
+            return `${player.ActiveCard.name} shoots a flurry of arrows at ${player.ActiveEvil}!`;
+        }
+    },
+    "Bow Sniper Shot": {
+        baseDamage: 25,
+        specialText: (player) => {
+            player.stats.bowSniperShotCount = (player.stats.bowSniperShotCount || 0) + 1;
+            let bodyParts = ["left arm", "right arm", "left leg", "right leg"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            return `${player.ActiveCard.name} takes careful aim and shoots a precise sniper shot at ${player.ActiveEvil} ripping through their ${bodyPart}!`;
+        }
+    },
+    "Bow Headshot": {
+        baseDamage: 30,
+        specialText: (player) => {
+            player.stats.bowHeadshotCount = (player.stats.bowHeadshotCount || 0) + 1;
+            return `${player.ActiveCard.name} takes careful aim and shoots a precise sniper shot at ${player.ActiveEvil}'s head!`;
+        }
+    },
+    "Arrow Storm": {
+        baseDamage: 40,
+        specialText: (player) => {
+            player.stats.arrowStormCount = (player.stats.arrowStormCount || 0) + 1;
+            return `${player.ActiveCard.name} sends arrow after arrow into the sky, creating an arrow storm raining down on ${player.ActiveEvil}, hitting them multiple times!`;
+        }
+    },
+    "Bow Trick Shot": {
+        baseDamage: 30,
+        specialText: (player) => {
+            player.stats.bowTrickShotCount = (player.stats.bowTrickShotCount || 0) + 1;
+            let bodyParts = ["left arm", "right arm", "left leg", "right leg", "butt", "hand", "toe", "nose", "fingers"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            return `${player.ActiveCard.name} shoots an arrow, then shoots another arrow, hitting the first arrow making it speed up and impale ${player.ActiveEvil}'s ${bodyPart}!`;
+        }
+
 }
 
 console.log("✅ Moves Loaded");
