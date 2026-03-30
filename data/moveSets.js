@@ -1,13 +1,13 @@
 export const moveSets = {
-  knight: ["Sword Swing", "Sword Strike", "Sword Charge", "Sword Block", "Sword Impale"],
+  knight: ["Sword Miss", "Sword Swing", "Sword Strike", "Sword Charge", "Sword Block", "Sword Impale", "Spear Miss", "Spear Stab"],
   noble: [],
   royal: [],
   scrappyFighter: [],
-  dirtyFighter: [],
+  dirtyFighter: ["Sword Impale", "Sword Flury"],
   crossbow: [],
-  bow: [],
-  potion: [],
-  sneak: [],
+  archer: [],
+  alchemist: [],
+  sneaker: [],
 }
 
 console.log("✅ Move Sets Loaded");
