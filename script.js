@@ -97,10 +97,11 @@ function removeXp(amount) {
 }
 function demotePlayer() {
     player.rank--;
-    player.xp = Math.floor(getNextRankValue() / 5) * 3;
     if (player.rank < 0) {
         player.rank = 0;
         player.xp = 0;
+    } else {
+        player.xp = Math.floor(values.ranks[player.rank-1].upgrade / 5) * 3;
     }
 }
 function getPlayerRank() {
@@ -115,18 +116,7 @@ function getRankTitle() {
     console.log(title);
     return title;
 }
-function getNextRankValue() {
-    const xpScaled = player.xp / 100;
-    let nextRankValue = values.ranks[0].value;
-    for (let rank of values.ranks) {
-        if (xpScaled < rank.value) {
-            nextRankValue = rank.value;
-        } else {
-            break;
-        }
-    }
-    return (nextRankValue*100);
-}
+
 
 
 //////////////////////////////////
@@ -170,7 +160,8 @@ function updateRankBar() {
                 rankBarWidth+=0.1;
             }
         }
-        if (rankBarWidth >= 100) {
+        //for the max rank, the bar should be full but the xp can still increase,
+        if (rankBarWidth >= 100) { 
             rankDisplay.style.width = 100 + '%';
         } else {
             rankDisplay.style.width = rankBarWidth + '%';
@@ -188,7 +179,6 @@ Object.assign(window, { setXp,
                         demotePlayer,
                         getPlayerRank,
                         getRankTitle,
-                        getNextRankValue,
                         updateRankDisplay,
                         updateRankInfo,
                         updateRankEmblum,
