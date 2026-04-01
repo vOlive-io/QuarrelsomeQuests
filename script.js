@@ -15,14 +15,17 @@ import { moveSets } from "./data/moves.js";
 //       PLAYER DEF      //
 ///////////////////////////
 var rankBarWidth = 0;
-var userInfo = {
-    playerName: "",
-}
 var player = {
+    gold : 0,
     xp: 1,
     rank: 0,
     rankTitle: "",
     cardsUnlocked: [],
+    activeCard: null,
+    activeTeam: [],
+    activeEvil: null,
+    evilOnDeck: [],
+    activeEffect: null,
 
 };
 
