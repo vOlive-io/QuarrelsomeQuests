@@ -531,6 +531,56 @@ export const moves = {
             return `${player.ActiveCard.name} quickly spins around with their backpack, hitting ${player.ActiveEvil} multiple times!`;
         }
     },
+    "Pencil Jab": {
+        baseDamage: 10,
+        specialText: (player) => {
+            player.stats.pencilJabCount = (player.stats.pencilJabCount || 0) + 1;
+            let bodyParts = ["left arm", "right arm", "left leg", "right leg", "butt", "hand", "toe", "nose", "fingers"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            return `${player.ActiveCard.name} quickly jabs ${player.ActiveEvil} in the ${bodyPart} with a pencil!`;
+        }
+    },
+    "Umbrella Block": {
+        baseDamage: 15,
+        specialText: (player) => {
+            player.stats.umbrellaBlockCount = (player.stats.umbrellaBlockCount || 0) + 1;
+            return `${player.ActiveCard.name} quickly opens their umbrella and blocks ${player.ActiveEvil}'s attack, jabbing them in the process!`;
+        }
+    },
+    "Trash Can Lid Bash": {
+        baseDamage: 15,
+        specialText: (player) => {
+            player.stats.trashCanLidBashCount = (player.stats.trashCanLidBashCount || 0) + 1;
+            let bodyParts = ["left arm", "right arm", "left leg", "right leg", "butt", "hand", "toe", "nose", "fingers"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            return `${player.ActiveCard.name} quickly picks up a trash can lid and bashes ${player.ActiveEvil} in the ${bodyPart}!`;
+        }
+    },
+    "Hot Coffee Splash": {
+        baseDamage: 15,
+        specialText: (player) => {
+            player.stats.hotCoffeeSplashCount = (player.stats.hotCoffeeSplashCount || 0) + 1;
+            return `${player.ActiveCard.name} quickly splashes hot coffee on ${player.ActiveEvil}!`;
+        }
+    },
+    "Laptop Slam": {
+        baseDamage: 25,
+        specialText: (player) => {
+            player.stats.laptopSlamCount = (player.stats.laptopSlamCount || 0) + 1;
+            let bodyParts = ["left arm", "right arm", "left leg", "right leg", "butt", "hand", "toe", "nose", "fingers"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            return `${player.ActiveCard.name} quickly slams a laptop down on ${player.ActiveEvil}'s ${bodyPart}!`;
+        }
+    },
+    "Quick Chair Swing": {
+        baseDamage: 25,
+        specialText: (player) => {
+            player.stats.quickChairSwingCount = (player.stats.quickChairSwingCount || 0) + 1;
+            let bodyParts = ["left arm", "right arm", "left leg", "right leg", "butt", "hand", "toe", "nose", "fingers"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            return `${player.ActiveCard.name} quickly swings a chair at ${player.ActiveEvil}, hitting them in the ${bodyPart}!`;
+        }
+    },
     "Makeshift Flurry (Stick & Rock)": {
         baseDamage: 25,
         specialText: (player) => {
@@ -551,6 +601,7 @@ export const moves = {
             return `${player.ActiveCard.name} fakes out ${player.ActiveEvil}, and then quickly picks up a stick and strikes their ${bodyPart}!`;
         }
     },
+
     //Wild weapons like gas + fire, chainsaws, power tools, etc. 
     //Royal weapons like a royal scepter, royal sword, royal bow, etc.
     //Legendary weapons like Excalibur, the Spear of Destiny, the Bow of Apollo, etc.
