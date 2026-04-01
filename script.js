@@ -22,14 +22,8 @@ var player = {
     xp: 1,
     rank: 0,
     rankTitle: "",
-    health: 0,
-    maxHealth: 0,
-    attack: 0,
-    defense: 0,
-    mana: 0,
-    energy: 0,
-    saturation: 0,
-    luck: 0,
+    cardsUnlocked: [],
+
 };
 
 ///////////////////////////
@@ -134,6 +128,25 @@ function updateRankBar() {
         rankDisplay.style.background = `linear-gradient(90deg, ${getPlayerRank().color} 0%, ${getPlayerRank().color} 50%, ${nextRank.color} 100%)`
         rankDisplay.innerHTML = Math.floor(rankBarWidth*100) / 100+ '%';
     }
+}
+
+
+
+//////////////////////////////////
+//      SAVE/LOAD FUNCTIONS     //
+//////////////////////////////////
+function savePlayerDataAsCookies() {
+    const data = {
+        playerStats: player,
+	};
+	localStorage.setItem('savedData', JSON.stringify(data));
+} 
+
+function loadPlayerDataFromCookies() {
+    savedData = JSON.parse(localStorage.getItem('savedData'));
+	if (savedData) {
+		player = savedData.playerStats || player;
+	}
 }
 Object.assign(window, { setXp,
                         addXp,
