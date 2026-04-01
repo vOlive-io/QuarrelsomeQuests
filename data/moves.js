@@ -830,12 +830,76 @@ export const moves = {
         }
     },
     
-    
+    /////   Royal   /////
+    "Royal Scepter Strike": {
+        baseDamage: 30,
+        damageType: "royal",
+        specialText: (player) => {
+            player.stats.royalScepterStrikeCount = (player.stats.royalScepterStrikeCount || 0) + 1;
+            let bodyParts = ["left arm", "right arm", "left leg", "right leg", "butt", "hand", "toe", "nose", "fingers"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            return `${player.ActiveCard.name} strikes ${player.ActiveEvil} with a royal scepter, hitting them in the ${bodyPart}!`;
+        }
+    },
+    "Royal Sword Slash": {
+        baseDamage: 35,
+        damageType: "royal",
+        specialText: (player) => {
+            player.stats.royalSwordSlashCount = (player.stats.royalSwordSlashCount || 0) + 1;
+            let bodyParts = ["left arm", "right arm", "left leg", "right leg", "butt", "hand", "toe", "nose", "fingers"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            return `${player.ActiveCard.name} slashes ${player.ActiveEvil} with a royal sword, hitting them in the ${bodyPart}!`;
+        }
+    },
+    "Crown Strike": {
+        baseDamage: 25,
+        damageType: "royal",
+        specialText: (player) => {
+            player.stats.crownStrikeCount = (player.stats.crownStrikeCount || 0) + 1;
+            let bodyParts = ["left arm", "right arm", "left leg", "right leg", "butt", "hand", "toe", "nose", "fingers"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            return `${player.ActiveCard.name} strikes ${player.ActiveEvil} with their royal crown, hitting them in the ${bodyPart}!`;
+        }
+    },
+    "Robe Whip": {
+        baseDamage: 20,
+        damageType: "royal",
+        specialText: (player) => {
+            player.stats.robeWhipCount = (player.stats.robeWhipCount || 0) + 1;
+            let bodyParts = ["left arm", "right arm", "left leg", "right leg", "butt", "hand", "toe", "nose", "fingers"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            return `${player.ActiveCard.name} whips ${player.ActiveEvil} with their royal robe, hitting them in the ${bodyPart}!`;
+        }
+    },
+    "Fake Out (Royal)": {
+        baseDamage: 25,
+        damageType: "royal",
+        specialText: (player) => {
+            player.stats.royalFakeOutCount = (player.stats.royalFakeOutCount || 0) + 1;
+            let bodyParts = ["arm", "guts", "butt", "leg", "foot", "hand", "toe"];
+            let bodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
+            return `${player.ActiveCard.name} fakes out ${player.ActiveEvil}, and then quickly strikes their ${bodyPart} with a royal weapon!`;
+        }
+    },
     
     //Wild weapons like gas + fire, chainsaws, power tools, etc. 
-    //Royal weapons like a royal scepter, royal sword, royal bow, etc.
     //Legendary weapons like Excalibur, the Spear of Destiny, the Bow of Apollo, etc.
     //I need spells and potions as well,
 };
 
-console.log("✅ Moves Loaded");
+
+export const moveSets = {
+  knight: ["Sword Miss", "Sword Swing", "Sword Strike", "Sword Charge", "Sword Block", "Sword Impale", "Spear Miss", "Spear Stab", "Spear Lunge", "Spear Charge"],
+  noble: ["Royal Sword Slash", "Sword Miss", "Sword Swing", "Sword Strike", "Sword Charge", "Sword Block"],
+  royal: ["Royal Scepter Strike", "Royal Sword Slash", "Crown Strike", "Robe Whip", "Fake Out (Royal)"],
+  dirtyFighter: ["Sword Impale", "Spear Impale", "Dagger Stab", "Dagger Flurry", "Dagger Backstab", "Bow Sniper Shot", "Crossbow Trick Shot", "Molotov Cocktail Throw", "Gasoline Splash", "Flame Thrower"],
+  alchemist: ["Pipette Burn", ],
+  wild: ["Rock Throw", "Sandbag Swing", "Backpack Spin", "Pencil Jab", "Umbrella Block", "Trash Can Lid Bash", "Hot Coffee Splash", "Laptop Slam", "Quick Chair Swing"],
+  sneaker: [],
+  rouge: ["Dagger Miss","Dagger Stab", "Dagger Backstab", "Grapple", "Punch Miss", "Punch", "Kick", "Headbutt", "Elbow Strike", "Knee Strike"],
+  arsonist: ["Molotov Cocktail Miss", "Molotov Cocktail Throw", "Flame Thrower", "Burning Barrage"],
+  assassin: ["Dagger Stab", "Dagger Flurry", "Dagger Backstab", "Bow Sniper Shot", "Crossbow Trick Shot"],
+  archer: ["Bow Miss", "Bow Shot", "Bow Power Shot", "Bow Trick Shot", "Bow Sniper Shot", "Arrow Storm", "Bow Headshot"],
+}
+
+console.log("✅ Move & Move Sets Loaded");
