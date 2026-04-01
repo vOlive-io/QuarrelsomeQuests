@@ -76,6 +76,14 @@ function getRankTitle() {
     console.log(title);
     return title;
 }
+function calculateDamage() {
+    let baseDamage = player.activeCard.baseDamage;
+    let classBonus = classes[player.activeCard.class].attack;
+    let damgageTypeBonus = player.activeCard.damageType == player.activeEvil.weakness ? 2 : 1;
+    let effectBonus = player.activeEffect == "Strength I" ? 1.5 : 1;
+    let prestigeBonus = player.activeCard.prestigeLevel;
+    return Math.floor(baseDamage * classBonus * damgageTypeBonus * effectBonus * prestigeBonus);
+}
 
 //////////////////////////////////
 //    RANK DISPLAY FUNCTIONS    //
@@ -130,8 +138,6 @@ function updateRankBar() {
     }
 }
 
-
-
 //////////////////////////////////
 //      SAVE/LOAD FUNCTIONS     //
 //////////////////////////////////
@@ -141,7 +147,6 @@ function savePlayerDataAsCookies() {
 	};
 	localStorage.setItem('savedData', JSON.stringify(data));
 } 
-
 function loadPlayerDataFromCookies() {
     savedData = JSON.parse(localStorage.getItem('savedData'));
 	if (savedData) {
@@ -159,5 +164,7 @@ Object.assign(window, { setXp,
                         updateRankInfo,
                         updateRankEmblum,
                         updateRankBar,
+                        savePlayerDataAsCookies,
+                        loadPlayerDataFromCookies,
                         
  });

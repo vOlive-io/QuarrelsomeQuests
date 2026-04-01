@@ -1,10 +1,6 @@
-export const classes = [
-    {
-        //////////////////////////////////
-        ///        BASIC CLASSES        //
-        //////////////////////////////////
-        //Adds to 15
-        name: "Warrior",
+export const classes = {
+
+    "Warrior": {
         path: ["Warrior", "Brute", "Berserker"],
         selected: true,
         unlocked: true,
@@ -13,10 +9,9 @@ export const classes = [
             attack: 10,
             defense: 5,
             mana: 50,
-        },
+        }
     },
-    {
-        name: "Mage",
+    "Mage": {
         path: ["Mage", "Sorcerer", "Archmage"],
         selected: false,
         unlocked: true,
@@ -25,10 +20,9 @@ export const classes = [
             attack: 7,
             defense: 8,
             mana: 250,
-        },
+        }
     },
-    {
-        name: "Ranger",
+    "Ranger": {
         path: ["Ranger", "Sharpshooter", "Stringer"],
         selected: false,
         unlocked: true,
@@ -39,8 +33,7 @@ export const classes = [
             mana: 100,
         },
     },
-    {
-        name: "Cleric",
+    "Cleric": {
         path: ["Cleric", "Priest", "Crusader"],
         selected: false,
         unlocked: false,
@@ -50,6 +43,6 @@ export const classes = [
             defense: 10,
             mana: 150,
         },
-    },
-];
+    }
+};
 console.log("✅ Classes loaded");
