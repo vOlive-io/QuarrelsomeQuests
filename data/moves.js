@@ -892,6 +892,7 @@ export const moveSets = {
   knight: ["Sword Miss", "Sword Swing", "Sword Strike", "Sword Charge", "Sword Block", "Sword Impale", "Spear Miss", "Spear Stab", "Spear Lunge", "Spear Charge"],
   noble: ["Royal Sword Slash", "Sword Miss", "Sword Swing", "Sword Strike", "Sword Charge", "Sword Block"],
   royal: ["Royal Scepter Strike", "Royal Sword Slash", "Crown Strike", "Robe Whip", "Fake Out (Royal)"],
+  spearman: ["Spear Miss", "Spear Stab", "Spear Lunge", "Spear Charge", "Spear Block", "Spear Impale"],
   dirtyFighter: ["Sword Impale", "Spear Impale", "Dagger Stab", "Dagger Flurry", "Dagger Backstab", "Bow Sniper Shot", "Crossbow Trick Shot", "Molotov Cocktail Throw", "Gasoline Splash", "Flame Thrower"],
   alchemist: ["Pipette Burn", ],
   wild: ["Rock Throw", "Sandbag Swing", "Backpack Spin", "Pencil Jab", "Umbrella Block", "Trash Can Lid Bash", "Hot Coffee Splash", "Laptop Slam", "Quick Chair Swing"],
