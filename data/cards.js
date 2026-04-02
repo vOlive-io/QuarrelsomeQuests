@@ -81,7 +81,22 @@ export const cards = [
         prestigeLevel: 1,
         moveSet: ["spearman", "dirtyFighter"]
     },
-
+    {
+        name: "Boxer",
+        class: "Warrior",
+        selected: false,
+        attack: 1.75,
+        prestigeLevel: 1,
+        moveSet: ["rouge"]
+    },
+    {
+        name: "Karate Kid",
+        class: "Warrior",
+        selected: false,
+        attack: 1.6,
+        prestigeLevel: 1,
+        moveSet: ["rouge"]
+    },
 
 
     //Ranger cards    
