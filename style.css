@@ -1,65 +1,9 @@
+/* Default Styles */
 body {
   text-align: center;
   align-content: center;
   background-size: cover;
   background: linear-gradient(0deg,#ffbdfb, #dbedff, #e8ffee) fixed;
-
-}
-#rankBar {
-  height: 100%;
-  width: 0%;
-}
-
-#rankBarContainer {
-  border: #966b06 solid 2px;
-  background-color: #ddd;
-  width: 90%;
-  height: 30px;
-  margin: 20px auto;
-}
-
-#rankEmblum {
-  height: 100%;
-  width: 100%;
-  margin: -10%;
-}
-
-.rankDisplayContainer {
-  height: 100%;
-  width: 30%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.gameDisplayContainer {
-  height: 100%;
-  width: 70%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-.left {
-  left: 0;
-  background-color: #ffbe28;
-}
-
-.right {
-  right: 0;
-  background-color: rgb(255, 255, 255);
-}
-
-
-#head-text {
-  color: #62548b;
-}
-#main-menu-text {
-  color: #62548b;
 }
 button {
   background-color: #62548b;
@@ -76,4 +20,58 @@ button {
 }
 li {
   list-style: none;
+}
+
+/* Special-Default Styles */
+#head-text {
+  color: #62548b;
+}
+#main-menu-text {
+  color: #62548b;
+}
+
+/* Split Screen */
+.rankDisplayContainer {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.gameDisplayContainer {
+  height: 100%;
+  width: 65%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.left {
+  left: 0;
+  background-color: #ffbe28;
+}
+.right {
+  right: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Rank Display */
+#rankBar {
+  height: 100%;
+  width: 0%;
+}
+#rankBarContainer {
+  border: #966b06 solid 2px;
+  background-color: #ddd;
+  width: 90%;
+  height: 30px;
+  margin: 20px auto;
+}
+#rankEmblum {
+  height: 100%;
+  width: 100%;
+  margin: -10%;
 }

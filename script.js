@@ -26,7 +26,6 @@ var player = {
     activeEvil: null,
     evilOnDeck: [],
     activeEffect: null,
-
 };
 
 ///////////////////////////
