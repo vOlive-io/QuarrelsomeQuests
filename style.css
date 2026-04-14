@@ -83,12 +83,17 @@ li {
   padding: 20px;
   border-radius: 15px;
 }
-.standardBattle, .seriesBattle {
-  border: #000000 2.5px solid;
+.standardBattle, .seriesBattle, .anarchyBattle {
+  border: #000000 0.5vw solid;
+  font-size: 2vw;
   margin: 10px;
   padding: 10px;
+  width: 62.5vw;
+  height: 24vw;
+}
+
+.standardBattle, .seriesBattle {
   width: 25vw;
-  height: 23vw;
   flex: 1;
 }
 
@@ -103,6 +108,3 @@ li {
 
 
 
-.anarchyBattle {
-  background-color: #dbedff;
-}
