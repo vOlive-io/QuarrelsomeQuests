@@ -181,9 +181,12 @@ function updateUnlockedBattles() {
 
             const cloutCount = document.createElement("b");
             const cloutCounterText = document.createTextNode("Clout: " + player.battleClout[battle.cloutKey] + "\n");
-            const br = document.createElement("br");
+            const br1 = document.createElement("br");
+            const br2 = document.createElement("br");
             cloutCount.appendChild(cloutCounterText);
-            cloutCount.appendChild(br);
+            cloutCount.appendChild(br1);
+            cloutCount.appendChild(br2);
+
 
             const enrollInBattle = document.createElement("button");
             const enrollInBattleText = document.createTextNode("Enroll in Battle");

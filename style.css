@@ -6,6 +6,8 @@ body {
   background: linear-gradient(0deg,#ffbdfb, #dbedff, #e8ffee) fixed;
 }
 button {
+  width: 30%;
+  height: 50%;
   background-color: #663504;
   color: white;
   border: none;
@@ -44,6 +46,7 @@ li {
   height: 100%;
   width: 65%;
   position: fixed;
+  align-items: center;
   z-index: 1;
   top: 0;
   overflow-x: hidden;
@@ -78,16 +81,18 @@ li {
 
 /* Battle Types */
 .battleBOX {
-  width: 90%;
-  height: 100%;
-  margin: 10px auto;
-  padding: 20px;
+  width: 80%;
+  height: 75%;
+  margin: 10% auto;
+  padding: 10%;
   border-radius: 15px;
 }
 .standardBattle, .seriesBattle, .anarchyBattle {
   border: #000000 0.5vw solid;
-  font-size: 2vw;
-  margin: 10px;
+  font-size: 75%;
+  margin: 7.5%;
+  margin-top: 0px;
+  margin-bottom: 2%;
   padding: 10px;
 }
 .somthing {
