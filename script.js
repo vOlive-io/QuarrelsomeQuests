@@ -166,50 +166,53 @@ function updateUnlockedBattles() {
 	for(let i = 0; i < values.battles.length; i++) {
         let battle = values.battles[i];
 		if (battle.unlockRank <= player.rank) {
-            const battleContainer = document.createElement("button");
+            const battleBOX = document.createElement("div");
+            battleBOX.classList.add("battleContainer");
+            battleBOX.classList.add(battle.type+"Battle");
+            battleBOX.classList.add("battleBOX");
+
             const battleh1 = document.createElement("h1");
-            const battlep = document.createElement("p");
-            const cloutCount = document.createElement("b");
-            battleContainer.classList.add("battleContainer");
-            battleContainer.classList.add(battle.type+"Battle");
-            battleContainer.classList.add("left");
-            battleContainer.style.backgroundColor = battle.color;
             const battleh1Text = document.createTextNode(battle.name);
-            const battle1Text = document.createTextNode(battle.description);
-            const cloutCounterText = document.createTextNode("Clout: " + player.battleClout[battle.cloutKey]);
             battleh1.appendChild(battleh1Text);
-            battlep.appendChild(battle1Text);
+
+            const battlDisc = document.createElement("p");
+            const battlDiscText = document.createTextNode(battle.description);
+            battlDisc.appendChild(battlDiscText);
+
+            const cloutCount = document.createElement("b");
+            const cloutCounterText = document.createTextNode("Clout: " + player.battleClout[battle.cloutKey] + "\n");
+            const br = document.createElement("br");
             cloutCount.appendChild(cloutCounterText);
-            battleContainer.appendChild(battleh1);
-            battleContainer.appendChild(battlep);
-            battleContainer.appendChild(cloutCount);
+            cloutCount.appendChild(br);
 
+            const enrollInBattle = document.createElement("button");
+            const enrollInBattleText = document.createTextNode("Enroll in Battle");
+            enrollInBattle.appendChild(enrollInBattleText);
+
+            battleBOX.appendChild(battleh1);
+            battleBOX.appendChild(battlDisc);
+        
             if(battle.type == "standard") {
-                let seriesBattle = values.battles[i+1];
-                const seriesBattleContainer = document.createElement("button");
-                const seriesBattleh1 = document.createElement("h1");
-                const seriesBattlep = document.createElement("p");
-                seriesBattleContainer.classList.add("battleContainer");
-                seriesBattleContainer.classList.add(seriesBattle.type+"Battle");
-                seriesBattleContainer.classList.add("right");
-                seriesBattleContainer.style.backgroundColor = seriesBattle.color;
-                const seriesBattleh1Text = document.createTextNode(seriesBattle.name);
-                const seriesBattle1Text = document.createTextNode(seriesBattle.description);
-                seriesBattleh1.appendChild(seriesBattleh1Text);
-                seriesBattlep.appendChild(seriesBattle1Text);
-                seriesBattleContainer.appendChild(seriesBattleh1);
-                seriesBattleContainer.appendChild(seriesBattlep);
+                const seriesBattleNote = document.createElement("p");
+                const seriesBattleNoteText = document.createTextNode(battle.seriesNote);
+                seriesBattleNote.appendChild(seriesBattleNoteText);
 
-                const battleBOX = document.createElement("div");
-                battleBOX.classList.add("battleBOX");
+                const enrollInSeries = document.createElement("button");
+                const enrollInSeriesText = document.createTextNode("Enroll in Series");
+                enrollInSeries.appendChild(enrollInSeriesText);
 
-                battleBOX.appendChild(battleContainer);
-                battleBOX.appendChild(seriesBattleContainer);
-                document.getElementById("battleSelection").appendChild(battleBOX);
-                i++;
+                battleBOX.appendChild(seriesBattleNote);
+                battleBOX.appendChild(cloutCount);
+                battleBOX.appendChild(enrollInBattle);
+                battleBOX.appendChild(enrollInSeries);
+                                
             } else {
-	            document.getElementById("battleSelection").appendChild(battleContainer);
-		    }
+                battleBOX.appendChild(cloutCount);
+                battleBOX.appendChild(enrollInBattle);
+            }
+            battleBOX.style.backgroundColor = battle.color;
+	        document.getElementById("battleSelection").appendChild(battleBOX);
+		    
 		} 
 	}
 }

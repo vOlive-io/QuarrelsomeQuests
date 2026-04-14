@@ -1,4 +1,4 @@
-var seriesAdd = "win 5 and gain rewards, lose 3 and your out."
+var seriesAdd = "win 5 battles and gain rewards, lose 3 and your out."
 export const values = {
 
     ranks: [
@@ -13,17 +13,49 @@ export const values = {
     battles: [
         //Standard Battles - Just the basic batles with no twists, the opponents will be randomly generated based on your rank.
         //Series Battles, these are standard battles strung together back to back, five five and gain rewards, lose three and your out.
-        { name: "Basic Battle", description: "A basic battle with basic opponents, basic XP gain.", unlockRank: 0, clash: true, type: "standard", color: "#36f75d", cloutKey: "basic" },
-        { name: "Basic Series", description: "A series of battles against a variety of basic opponents, (NOTE: You may switch your card during the serires). "+seriesAdd, unlockRank: 0, clash: true, type: "series", color: "#36f75d"},
+        { 
+            name: "Basic Battle", 
+            description: "BATTLE: A basic battle with a variety of basic opponents. Pick one card and use it as your hero. A great battle for onboarding and learning the Quarrelsome Quests meta and understand how gameplay works! When won XP, Gold and Clout gain are mild, but when lost XP & Clout are still guaranteed.",
+            seriesNote: "SERIES: You may switch your card during the serires with no penalty, " + seriesAdd,
+            unlockRank: 0, 
+            clash: true, 
+            type: "standard", 
+            color: "#36f75d", 
+            cloutKey: "basic" 
+        },
 
-        { name: "Team Battle",  description: "You may select up to 3 cards for this battle as your team, our oponets will also be a team.", unlockRank: 1, clash: true, type: "standard", color: "#6d68ff", cloutKey: "team" },
-        { name: "Team Series",  description: "A series of battles against teams of opponents, (NOTE: Your team will not change throughout the sieres, but will heal slightly before the next battle). "+seriesAdd, unlockRank: 1, clash: true, type: "series", color: "#6d68ff", },
+        { 
+            name: "Team Battle",  
+            description: "BATTLE: You may select up to 3 cards for this battle as your team of heros. In battle they will take turns dealing hits and taking damage. Your oppent will also be on a team sized 1-3 cards. We wish you the best of luck and may th ebest team win! XP & Gold gain is mutilplyed by team size!", 
+            seriesNote: "SERIES: Your team will not change throughout the sieres, but will heal slightly before the next battle. May your team be blessed, " + seriesAdd,
+            unlockRank: 1, 
+            clash: true, 
+            type: "standard", 
+            color: "#6d68ff", 
+            cloutKey: "team" 
+        },
         
-        { name: "Pro Battle",   description: "A challenging battle with devius opponents, large XP gain.", unlockRank: 2, clash: true, type: "standard", color: "#ffbe28", cloutKey: "pro" },
-        { name: "Pro Series",   description: "A series of battles against experienced and difficult opponents,  (NOTE: You may switch your card during the serires). "+seriesAdd, unlockRank: 2, clash: true, type: "series", color: "#ffbe28" },
+        { 
+            name: "Pro Battle",   
+            description: "BATTLE: A challenging battle with devius opponents, large XP gain.", 
+            seriesNote: "SERIES: You can choose upto 3 cards to take with you on your seires, if one dies or cannot battle you may pick from your \'on deck\' cards. If you are of \'on deck\' cards, you automaticly end the seires as a loss. Good luck, " + seriesAdd,
+            unlockRank: 2, 
+            clash: true, 
+            type: "standard", 
+            color: "#ffbe28", 
+            cloutKey: "pro" 
+        },
         
-        { name: "Elite Battle", description: "An elite battle with the toughest opponents, massive gains if won but if lost your rank will be reduced.", unlockRank: 3, clash: true, type: "standard", color: "#ff006a", cloutKey: "elite" },
-        { name: "Elite Series", description: "A series of difficalut battles, with the same rules (NOTE: Any lost seires battles will just remove XP from the seires total). "+seriesAdd, unlockRank: 3, clash: true, type: "series", color: "#ff006a" },
+        { 
+            name: "Elite Battle", 
+            description: "BATTLE: An elite battle with the toughest opponents, massive gains if won but if lost your rank will be reduced.", 
+            seriesNote: "SERIES: Any lost battles in a series will just remove XP from the seires total. You only take one card with you to a seires, you cannot change it. If your card dies or cannot battle, you automaticly end the seires as a loss. For elites only, "+seriesAdd,
+            unlockRank: 3, 
+            clash: true, 
+            type: "standard", 
+            color: "#ff006a", 
+            cloutKey: "elite" 
+        },
 
         //Anarchy Battles These battles have special rules that challenge you in different ways.
         { name: "Mirror Battle", description: "A battle where you face off against a copy of your own card.", unlockRank: 1, clash: false, type: "anarchy", color: "#b9e1ff", cloutKey: "mirror" },
