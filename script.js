@@ -26,6 +26,19 @@ var player = {
     activeEvil: null,
     evilOnDeck: [],
     activeEffect: null,
+    battleClout: {
+        basic: 0,
+        team: 0,
+        pro: 0,
+        elite: 0,
+        mirror: 0,
+        chaos: 0,
+        trivia: 0,
+        doubleTrouble: 0,
+        cloverClub: 0,
+        mystery: 0
+    }
+    
     
 };
 console.log(values)
@@ -150,16 +163,21 @@ function updateUnlockedBattles() {
             const battleContainer = document.createElement("button");
             const battleh1 = document.createElement("h1");
             const battlep = document.createElement("p");
+            const cloutCount = document.createElement("b");
             battleContainer.classList.add("battleContainer");
             battleContainer.classList.add(battle.type+"Battle");
             battleContainer.classList.add("left");
             battleContainer.style.backgroundColor = battle.color;
             const battleh1Text = document.createTextNode(battle.name);
             const battle1Text = document.createTextNode(battle.description);
+            const cloutCounterText = document.createTextNode("Clout: " + player.battleClout[battle.cloutKey]);
             battleh1.appendChild(battleh1Text);
             battlep.appendChild(battle1Text);
+            cloutCount.appendChild(cloutCounterText);
             battleContainer.appendChild(battleh1);
             battleContainer.appendChild(battlep);
+            battleContainer.appendChild(cloutCount);
+
             if(battle.type == "standard") {
                 let seriesBattle = values.battles[i+1];
                 const seriesBattleContainer = document.createElement("button");
