@@ -147,25 +147,20 @@ function updateUnlockedBattles() {
 	for(let i = 0; i < values.battles.length; i++) {
         let battle = values.battles[i];
 		if (battle.unlockRank <= player.rank) {
-            //if the battle is standdard, maker its series vertion right next to it in a split screen format, thos will work because ecah standard battles's seires equivilant is i+1 from it.
+            const battleContainer = document.createElement("button");
+            const battleh1 = document.createElement("h1");
+            const battlep = document.createElement("p");
+            battleContainer.classList.add("battleContainer");
+            battleContainer.classList.add(battle.type+"Battle");
+            battleContainer.classList.add("left");
+            battleContainer.style.backgroundColor = battle.color;
+            const battleh1Text = document.createTextNode(battle.name);
+            const battle1Text = document.createTextNode(battle.description);
+            battleh1.appendChild(battleh1Text);
+            battlep.appendChild(battle1Text);
+            battleContainer.appendChild(battleh1);
+            battleContainer.appendChild(battlep);
             if(battle.type == "standard") {
-                const battleBOX = document.createElement("div");
-
-                const battleContainer = document.createElement("button");
-                const battleh1 = document.createElement("h1");
-                const battlep = document.createElement("p");
-                battleContainer.classList.add("battleContainer");
-                battleContainer.classList.add(battle.type+"Battle");
-                battleContainer.classList.add("left");
-                battleContainer.style.backgroundColor = battle.color;
-                const battleh1Text = document.createTextNode(battle.name);
-                const battle1Text = document.createTextNode(battle.description);
-                battleh1.appendChild(battleh1Text);
-                battlep.appendChild(battle1Text);
-                battleContainer.appendChild(battleh1);
-                battleContainer.appendChild(battlep);
-                battleBOX.appendChild(battleContainer);
-
                 let seriesBattle = values.battles[i+1];
                 const seriesBattleContainer = document.createElement("button");
                 const seriesBattleh1 = document.createElement("h1");
@@ -180,24 +175,15 @@ function updateUnlockedBattles() {
                 seriesBattlep.appendChild(seriesBattle1Text);
                 seriesBattleContainer.appendChild(seriesBattleh1);
                 seriesBattleContainer.appendChild(seriesBattlep);
-                battleBOX.appendChild(seriesBattleContainer);
-                
+
+                const battleBOX = document.createElement("div");
                 battleBOX.classList.add("battleBOX");
+
+                battleBOX.appendChild(battleContainer);
+                battleBOX.appendChild(seriesBattleContainer);
                 document.getElementById("battleSelection").appendChild(battleBOX);
                 i++;
             } else {
-			    const battleContainer = document.createElement("button");
-    	        const battleh1 = document.createElement("h1");
-	            const battlep = document.createElement("p");
-                battleContainer.classList.add("battleContainer");
-                battleContainer.classList.add(battle.type+"Battle");
-                battleContainer.style.backgroundColor = battle.color;
-            	const battleh1Text = document.createTextNode(battle.name);
-    	        const battle1Text = document.createTextNode(battle.description);
-	            battleh1.appendChild(battleh1Text);
-                battlep.appendChild(battle1Text);
-	            battleContainer.appendChild(battleh1);
-	            battleContainer.appendChild(battlep);
 	            document.getElementById("battleSelection").appendChild(battleContainer);
 		    }
 		} 
