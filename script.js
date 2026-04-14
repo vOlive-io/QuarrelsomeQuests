@@ -11,6 +11,12 @@ import { effects } from "./data/effects.js";
 import { moves } from "./data/moves.js";
 import { moveSets } from "./data/moves.js";
 
+function initiateGame() {
+    loadPlayerDataFromCookies();
+    updateRankDisplay();
+    updateUnlockedBattles();
+    
+}
 ///////////////////////////
 //       PLAYER DEF      //
 ///////////////////////////
@@ -41,7 +47,6 @@ var player = {
     
     
 };
-console.log(values)
 ///////////////////////////
 //   HELPER FUNCTIONS    //
 ///////////////////////////
@@ -218,12 +223,13 @@ function savePlayerDataAsCookies() {
 	localStorage.setItem('savedData', JSON.stringify(data));
 } 
 function loadPlayerDataFromCookies() {
-    savedData = JSON.parse(localStorage.getItem('savedData'));
+    let savedData = JSON.parse(localStorage.getItem('savedData'));
 	if (savedData) {
 		player = savedData.playerStats || player;
-	}
+	} else {return}
 }
-Object.assign(window, { setXp,
+Object.assign(window, { initiateGame,
+                        setXp,
                         addXp,
                         removeXp,
                         promotePlayer,
@@ -238,4 +244,5 @@ Object.assign(window, { setXp,
                         savePlayerDataAsCookies,
                         loadPlayerDataFromCookies,
                         
- });
+});
+initiateGame();
