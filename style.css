@@ -75,3 +75,34 @@ li {
   width: 100%;
   margin: -10%;
 }
+
+/* Battle Types */
+.battleContainer {
+  width: 60vw;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 15px;
+}
+.standardBattle, .seriesBattle {
+  border: #000000 2.5px solid;
+  margin: 10px;
+  padding: 10px;
+  width: 25vw;
+  height: 23vw;
+  flex: 1;
+}
+
+.battleBOX {
+    display: flex;
+    gap: 0px;
+    align-items: stretch;
+    flex: 1;
+}
+
+
+
+
+
+.anarchyBattle {
+  background-color: #dbedff;
+}
