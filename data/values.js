@@ -25,9 +25,12 @@ export const values = {
 
         //Anarchy Battles These battles have special rules that challenge you in different ways.
         { name: "Mirror Battle", description: "A battle where you face off against a copy of your own card.", unlockRank: 1, clash: false, type: "anarchy", color: "#b9e1ff" },
-        { name: "Relic Battle", description: "Start the game with a random relic, if you win you might just get to keep it....", unlockRank: 1, clash: false, type: "anarchy", color: "#d483ff" },
-        { name: "Chaos Battle", description: "Each turn triggers random event  and new effects are applied constatnly", unlockRank: 1, clash: false, type: "anarchy", color: "#d9ff00" },
-        { name: "Trivia Battle", description: "Answer questions to gain advantages in battle, bu tif you get it wrong.. your opponent may buzz in for a steal...", unlockRank: 1, clash: false, type: "anarchy", color: "#0073ff" },
+        //{ name: "Relic Battle", description: "Start the game with a random relic, if you win you might just get to keep it....", unlockRank: 1, clash: false, type: "anarchy", color: "#d483ff" },
+        { name: "Chaos Battle", description: "Each turn triggers new effects to be applied constatnly. You might just find yourself stugling to hit hard enught due to weakness, but you oponet cant hit anything due too blindness! Good luck...", unlockRank: 2, clash: false, type: "anarchy", color: "#e0d100" },
+        { name: "Trivia Battle", description: "Answer questions to gain advantages in battle, bu tif you get it wrong.. your opponent may buzz in for a steal...", unlockRank: 2, clash: false, type: "anarchy", color: "#0073ff" },
+        { name: "Double Trouble Battle", description: "You and your opponent each select two cards to battle with, but at the start of the battl eyou an dyour oponet with swap one card. Pick your cards carfuly so you dont get stuck with a bad hand, do you think you could win in the chaos?", unlockRank: 3, clash: false, type: "anarchy", color: "#b95b12" },
+        { name: "Clover Club Battle", description: "You will be delt a random card from you deck, during the battle your card may be randomly switched out for another in your decking, keeping all damage receved. Make ure to pay attentine or you may just lose everything...", unlockRank: 3, clash: false, type: "anarchy", color: "#00ff15" },
+        { name: "??? Battle", description: "A mysterious team battle with unknown variations and opponents, enter at your own risk. Select three cards to enter. NOTE: Your picked cards may turn against you, so choose wisely.", unlockRank: 4, clash: false, type: "anarchy", color: "#1a0228" },
 
     ],
 };
