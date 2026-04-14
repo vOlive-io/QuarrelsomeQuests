@@ -55,7 +55,7 @@ li {
 }
 .right {
   right: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff2e6;
 }
 
 /* Rank Display */
@@ -91,20 +91,13 @@ li {
   width: 62.5vw;
   height: 30vw;
 }
-
 .standardBattle, .seriesBattle {
   width: 25vw;
   flex: 1;
 }
-
 .battleBOX {
     display: flex;
     gap: 0px;
     align-items: stretch;
     flex: 1;
 }
-
-
-
-
-

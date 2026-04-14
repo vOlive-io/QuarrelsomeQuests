@@ -1,7 +1,6 @@
 ///////////////////////////
 //       IMPORTS         //
 ///////////////////////////
-
 import { cards } from "./data/cards.js";
 import { values } from "./data/values.js";
 import { classes } from "./data/classes.js";
@@ -159,7 +158,9 @@ function updateRankBar() {
     }
 }
 
-
+//////////////////////////////////
+//       BATTLE FUNCTIONS       //
+//////////////////////////////////
 function updateUnlockedBattles() {
     document.getElementById("battleSelection").innerHTML = "";	
 	for(let i = 0; i < values.battles.length; i++) {
