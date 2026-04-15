@@ -20,7 +20,8 @@ export const values = {
             unlockRank: 0, 
             clash: true, 
             type: "standard", 
-            color: "#36f75d", 
+            color: "#36f75d",
+            accent: "#0a3803",
             cloutKey: "basic" 
         },
 
@@ -32,6 +33,7 @@ export const values = {
             clash: true, 
             type: "standard", 
             color: "#6d68ff", 
+            accent: "rgb(63, 15, 90)",
             cloutKey: "team" 
         },
         
@@ -43,6 +45,7 @@ export const values = {
             clash: true, 
             type: "standard", 
             color: "#ffbe28", 
+            accent: "#685016",
             cloutKey: "pro" 
         },
         
@@ -54,6 +57,7 @@ export const values = {
             clash: true, 
             type: "standard", 
             color: "#ff006a", 
+            accent: "#601031",
             cloutKey: "elite" 
         },
 

@@ -191,6 +191,8 @@ function updateUnlockedBattles() {
             const enrollInBattle = document.createElement("button");
             const enrollInBattleText = document.createTextNode("Enroll in Battle");
             enrollInBattle.appendChild(enrollInBattleText);
+            enrollInBattle.style.backgroundColor = battle.accent;
+
 
             battleBOX.appendChild(battleh1);
             battleBOX.appendChild(battlDisc);
@@ -203,11 +205,13 @@ function updateUnlockedBattles() {
                 const enrollInSeries = document.createElement("button");
                 const enrollInSeriesText = document.createTextNode("Enroll in Series");
                 enrollInSeries.appendChild(enrollInSeriesText);
+                enrollInSeries.style.backgroundColor = battle.accent;
 
                 battleBOX.appendChild(seriesBattleNote);
                 battleBOX.appendChild(cloutCount);
                 battleBOX.appendChild(enrollInBattle);
                 battleBOX.appendChild(enrollInSeries);
+
                                 
             } else {
                 battleBOX.appendChild(cloutCount);

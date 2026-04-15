@@ -6,19 +6,21 @@ body {
   background: linear-gradient(0deg,#ffbdfb, #dbedff, #e8ffee) fixed;
 }
 button {
-  width: 30%;
+  width: 49.111%;
   height: 50%;
-  background-color: #663504;
+  font-size: 1.2vw;
   color: white;
   border: none;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 12px;
+}
+p, b {
+  font-size: 1.2vw;
 }
 li {
   list-style: none;
