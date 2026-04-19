@@ -1,4 +1,4 @@
-var seriesAdd = "win 5 battles and gain rewards, lose 3 and your out."
+var seriesAdd = "win 5 battles and gain rewards, lose 3 and you\'re out."
 export const values = {
 
     ranks: [
@@ -27,8 +27,8 @@ export const values = {
 
         { 
             name: "Team Battle",  
-            description: "BATTLE: You may select up to 3 cards for this battle as your team of heros. In battle they will take turns dealing hits and taking damage. Your oppent will also be on a team sized 1-3 cards. We wish you the best of luck and may th ebest team win! XP & Gold gain is mutilplyed by team size!", 
-            seriesNote: "SERIES: Your team will not change throughout the sieres, but will heal slightly before the next battle. May your team be blessed, " + seriesAdd,
+            description: "BATTLE: You may select up to 3 cards for this battle as your team of heroes. In battle they will take turns dealing hits and taking damage. Your opponent will also be on a team sized 1-3 cards. We wish you the best of luck and may the best team win! XP & Gold gain is mutilplied by team size!", 
+            seriesNote: "SERIES: Your team will not change throughout the series, but will heal slightly before the next battle. May your team be blessed, " + seriesAdd,
             unlockRank: 1, 
             clash: true, 
             type: "standard", 
@@ -39,8 +39,8 @@ export const values = {
         
         { 
             name: "Pro Battle",   
-            description: "BATTLE: A challenging battle with devius opponents, large XP gain.", 
-            seriesNote: "SERIES: You can choose upto 3 cards to take with you on your seires, if one dies or cannot battle you may pick from your \'on deck\' cards. If you are of \'on deck\' cards, you automaticly end the seires as a loss. Good luck, " + seriesAdd,
+            description: "BATTLE: A challenging battle with devious opponents, large XP gain.", 
+            seriesNote: "SERIES: You can choose up to 3 cards to take with you on your series. If one dies or cannot battle you may pick from your \'on deck\' cards. If you are of \'on deck\' cards, you automatically end the series as a loss. Good luck, " + seriesAdd,
             unlockRank: 2, 
             clash: true, 
             type: "standard", 
@@ -51,8 +51,8 @@ export const values = {
         
         { 
             name: "Elite Battle", 
-            description: "BATTLE: An elite battle with the toughest opponents, massive gains if won but if lost your rank will be reduced.", 
-            seriesNote: "SERIES: Any lost battles in a series will just remove XP from the seires total. You only take one card with you to a seires, you cannot change it. If your card dies or cannot battle, you automaticly end the seires as a loss. For elites only, "+seriesAdd,
+            description: "BATTLE: An elite battle with the toughest opponents, massive gains if won, but if lost your rank will be reduced.", 
+            seriesNote: "SERIES: Any lost battles in a series will remove XP from the series total. You only take one card with you to a series, you cannot change it. If your card dies or cannot battle, you automatically end the seires as a loss. For elites only, "+seriesAdd,
             unlockRank: 3, 
             clash: true, 
             type: "standard", 
@@ -62,13 +62,67 @@ export const values = {
         },
 
         //Anarchy Battles These battles have special rules that challenge you in different ways.
-        { name: "Mirror Battle", description: "A battle where you face off against a copy of your own card.", unlockRank: 1, clash: false, type: "anarchy", color: "#b9e1ff", cloutKey: "mirror" },
+        { 
+            name: "Mirror Battle", 
+            description: "A battle where you face off against a copy of your own card.", 
+            unlockRank: 1, 
+            clash: false, 
+            type: "anarchy", 
+            color: "#b9e1ff",
+            accent: "#0b2e49",
+            cloutKey: "mirror" 
+        },
         //{ name: "Relic Battle", description: "Start the game with a random relic, if you win you might just get to keep it....", unlockRank: 1, clash: false, type: "anarchy", color: "#d483ff" },
-        { name: "Chaos Battle", description: "Each turn triggers new effects to be applied constatnly. You might just find yourself stugling to hit hard enught due to weakness, but you oponet cant hit anything due too blindness! Good luck...", unlockRank: 2, clash: false, type: "anarchy", color: "#e0d100", cloutKey: "chaos" },
-        { name: "Trivia Battle", description: "Answer questions to gain advantages in battle, bu tif you get it wrong.. your opponent may buzz in for a steal...", unlockRank: 2, clash: false, type: "anarchy", color: "#0073ff", cloutKey: "trivia" },
-        { name: "Double Trouble Battle", description: "You and your opponent each select two cards to battle with, but at the start of the battl eyou an dyour oponet with swap one card. Pick your cards carfuly so you dont get stuck with a bad hand, do you think you could win in the chaos?", unlockRank: 3, clash: false, type: "anarchy", color: "#b95b12", cloutKey: "doubleTrouble" },
-        { name: "Clover Club Battle", description: "You will be delt a random card from you deck, during the battle your card may be randomly switched out for another in your decking, keeping all damage receved. Make ure to pay attentine or you may just lose everything...", unlockRank: 3, clash: false, type: "anarchy", color: "#00ff15", cloutKey: "cloverClub" },
-        { name: "??? Battle", description: "A mysterious team battle with unknown variations and opponents, enter at your own risk. Select three cards to enter. NOTE: Your picked cards may turn against you, so choose wisely.", unlockRank: 4, clash: false, type: "anarchy", color: "#1a0228", cloutKey: "mystery" },
+        { 
+            name: "Chaos Battle", 
+            description: "Each turn triggers new effects to be applied constatnly. You might just find yourself stuggling to hit hard enough due to weakness, but you opponent can't hit anything due too blindness! Good luck...", 
+            unlockRank: 2, 
+            clash: false, 
+            type: "anarchy", 
+            color: "#e0d100",
+            accent: "#49450b",
+            cloutKey: "chaos" 
+        },
+        { 
+            name: "Trivia Battle", 
+            description: "Answer questions to gain advantages in battle, but if you get it wrong, your opponent may buzz in for a steal...",
+            unlockRank: 2, 
+            clash: false, 
+            type: "anarchy", 
+            color: "#0073ff", 
+            accent: "#0b1d33",
+            cloutKey: "trivia" 
+        },
+        { 
+            name: "Double Trouble Battle", 
+            description: "You and your opponent each select two cards to battle with, but at the start of the battle you and your opponent will swap one card. Pick your cards carefully so you don\'t get stuck with a bad hand. Do you think you could win in the chaos?", 
+            unlockRank: 3, 
+            clash: false, 
+            type: "anarchy", 
+            color: "#b95b12", 
+            accent: "#582d0d",
+            cloutKey: "doubleTrouble"
+        },
+        { 
+            name: "Clover Club Battle", 
+            description: "You will be dealt a random card from you deck. During the battle, your card may be randomly switched out for another in your deck, keeping all damage received. Make sure to pay attention or you may just lose everything...", 
+            unlockRank: 3, 
+            clash: false, 
+            type: "anarchy", 
+            color: "#00ff15", 
+            accent: "#075e0a",
+            cloutKey: "cloverClub"
+        },
+        { 
+            name: "??? Battle", 
+            description: "A mysterious team battle with unknown variations and opponents... enter at your own risk. Select three cards to enter. NOTE: Your picked cards may turn against you, so choose wisely.", 
+            unlockRank: 4, 
+            clash: false, 
+            type: "anarchy", 
+            color: "#1a0228", 
+            accent: "#26051c",
+            cloutKey: "mystery" 
+        },
 
     ],
 };
