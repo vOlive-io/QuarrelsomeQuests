@@ -8,9 +8,9 @@ Play on the GitHub Pages site here:
 👉 https://volive-io.github.io/QuarrelsomeQuests/
 
 ## 📋 Details
-*This project is written in the classic ‘WebDev’ language kit, utilizing HTML5, CSS, and JavaScript. This allows it to run fully in the browser and is compatible with console commands.
-*QuarrelsomeQuests started in **Jul 5, 2024**, as a fighter game, but since has slowly evolved into the deck building game it is now.
-*This project is still underdevelopment, and large updates are planned, stay tuned!
+* This project is written in the classic ‘WebDev’ language kit, utilizing HTML5, CSS, and JavaScript. This allows it to run fully in the browser and is compatible with console commands.
+* QuarrelsomeQuests started in **Jul 5, 2024**, as a fighter game, but since has slowly evolved into the deck building game it is now.
+* This project is still underdevelopment, and large updates are planned, stay tuned!
 
 ## 💪 Contributors!
 These people made this project possible.
