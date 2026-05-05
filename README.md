@@ -1,4 +1,7 @@
 # ⚔️ QuarrelsomeQuests
+[![GitHub Stars](https://img.shields.io/github/stars/vOlive-io/QuarrelsomeQuests.svg)](https://github.com/vOlive-io/QuarrelsomeQuests/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/vOlive-io/QuarrelsomeQuests.svg)](https://github.com/vOlive-io/QuarrelsomeQuests/issues) 
+
 QuarrelsomeQuests is a deck-building card game revolving around your ‘heroes’, cards that go into battle for you. You can collect, purchase, and pull these cards in the store found in-game, or collect them from various ingame events! Each card has a set of moves atched to it, this allows for each card to, when in battle, have a unique playstyle causing a fun gameplay loop.
 
 ## 💻 How to Install
