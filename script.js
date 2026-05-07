@@ -191,7 +191,7 @@ function updateUnlockedBattles() {
             const enrollInBattle = document.createElement("button");
             const enrollInBattleText = document.createTextNode("Enroll in Battle");
             enrollInBattle.appendChild(enrollInBattleText);
-            enrollInBattle.addEventListener("click", pickBattle(battle.type));
+            enrollInBattle.addEventListener("click", () => pickBattle(battle.name));
             enrollInBattle.style.backgroundColor = battle.accent;
 
 
@@ -206,7 +206,7 @@ function updateUnlockedBattles() {
                 const enrollInSeries = document.createElement("button");
                 const enrollInSeriesText = document.createTextNode("Enroll in Series");
                 enrollInSeries.appendChild(enrollInSeriesText);
-                enrollInSeries.addEventListener("click", pickBattle(battle.type+" Series"));
+                enrollInSeries.addEventListener("click", () => pickBattle(battle.name+" Series"));
 
                 enrollInSeries.style.backgroundColor = battle.accent;
 
@@ -228,8 +228,11 @@ function updateUnlockedBattles() {
 }
 
 function pickBattle(battle) {
-    switch(battle.type) {
-        case "Basic Battle": {}; break;
+    console.log("picked battle: " + battle);
+    switch(battle) {
+        case "Basic Battle": {
+            basicBattle();
+        }; break;
         case "Team Battle": {}; break;
         case "Pro Battle": {}; break;
         case "Elite Battle": {}; break;
@@ -249,6 +252,10 @@ function pickBattle(battle) {
     }
 }
 
+function basicBattle() {
+    console.log("basic battle engaged");
+
+}
 //////////////////////////////////
 //      SAVE/LOAD FUNCTIONS     //
 //////////////////////////////////
