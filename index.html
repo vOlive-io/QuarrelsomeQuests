@@ -8,7 +8,7 @@
 <body>
   <div id="welcome" class="tab">
     <h1 id="head-text">QuarrelsomeQuests!</h1>
-    <div class="rankDisplayContainer left">
+    <div class="rankDisplayContainer left" id="rankDisplayContainer">
       <div class="centered">
         <h2>Rank Progress:</h2>
         <img id="rankEmblum" src="assets/unranked.png" alt="Rank Icon">
@@ -18,8 +18,16 @@
         <p id="rankInfo"><i id="rankTitle">Unranked</i> : <i id="rankProgress">0/0</i></p>
       </div>
     </div>
+    <div class="battleRoom right" id="battleRoom"">
+      <div class="centered">
+        <h2>Battle Room</h2>
+        <div id="enemyCardsDisplay" class="card left"></div>
+        <div id="playerCardsDisplay" class="card right"></div>
+        <p id="battleRoomText">Welcome to the battle room, here you will fight your battles and progress through your quests! (coming soon)</p>
+      </div>
 
-    <div class="gameDisplayContainer right">
+    </div>
+    <div class="gameDisplayContainer right" id="gameDisplayContainer">
       <div class="centered">
         <h2>Select Battle Type: </h2>
           <div id="battleSelection">
@@ -28,16 +36,7 @@
       </div>
     </div>
     
-    <p id="main-menu-text">Welcome to QuarrelsomeQuests, where you level up, train and battle with the compaions of your choice.</p>
-    <ul>
-      <li id="main-menu-text">Go to the <b>Battle</b> tab to begin a quest full of feuds and fun!</li>
-      <li id="main-menu-text">Go to the <b>Store</b> tab to buy items like weapons, armor, shoes, companions and more</li>
-      <li id="main-menu-text">Go to the <b>Ranks</b> tab to check your stats and redeem your achievement points.</li>
-    </ul>
-    <button onclick="openBattle()">Battle (Coming soon)</button>
-    <button onclick="openStore()">Store (Coming soon)</button>
-    <button onclick="openRanks()">Ranks (Coming soon)</button>
-  </div>
+  
     <table>
       <tr>
         <th colspan="4">Item Store</th>

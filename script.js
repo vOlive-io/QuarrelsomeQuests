@@ -254,7 +254,8 @@ function pickBattle(battle) {
 
 function basicBattle() {
     console.log("basic battle engaged");
-
+    document.getElementById("gameDisplayContainer").style.display = "none";
+    document.getElementById("battleRoom").style.display = "block";
 }
 //////////////////////////////////
 //      SAVE/LOAD FUNCTIONS     //
